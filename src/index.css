@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'netflix-sans';
+  src: url(../fonts/NetflixSansRegular.ttf);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'netflix-sans';
+}
+
+
+:root {
+   --second-bg-color: #181217ad;
+   --bg-color: #000 ;
+   --bg-color-login: #000000da ;
+   --box-color: #5E5E5E;
+   --box-animate: #2D2D2D;
+   --color: #fff;
+   --color-principal: #C11119;
+
+}
+
+body{
+  background-color: var(--second-bg-color);
+  color: var(--color);
+  
+}
+
+#image {
+ 
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url(../src/assets/best-anime.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 30% 100%;
+  
+}
+
+nav h1 {
+  font-size: 50px;
+  padding-left: 4%;
+  color: red;
+}
