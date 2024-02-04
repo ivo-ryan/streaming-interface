@@ -1,15 +1,13 @@
+import { Navbar } from "../../components/navbar/navbar";
 import { FormContainer, MsgSucesso, Valid} from "./style";
 import {BiXCircle} from 'react-icons/bi';
 
 export const Form  = () => {
-    return (
-        <>
-      
+    return (      
         <section id="image">   
+        <div id="back-container">
 
-        <nav>
-            <h1>Netflix</h1>
-        </nav>
+        <Navbar  />
 
         <FormContainer >
 
@@ -51,8 +49,9 @@ export const Form  = () => {
             </div>
             </FormContainer>
 
+        </div>
         </section>
-        </>
+
     )
 
 }

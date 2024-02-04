@@ -1,13 +1,10 @@
-@font-face {
-  font-family: 'netflix-sans';
-  src: url(../fonts/NetflixSansRegular.ttf);
-}
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'netflix-sans';
+  font-family: 'Ubuntu', sans-serif;
+  list-style: none;
 }
 
 
@@ -16,7 +13,7 @@
    --bg-color: #000 ;
    --bg-color-login: #000000da ;
    --box-color: #5E5E5E;
-   --box-animate: #2D2D2D;
+   --box-animate: #212121ba;
    --color: #fff;
    --color-principal: #C11119;
 
@@ -25,10 +22,9 @@
 body{
   background-color: var(--second-bg-color);
   color: var(--color);
-  
 }
 
-#image {
+#image, #home {
  
   width: 100vw;
   min-height: 100vh;
@@ -37,6 +33,10 @@ body{
   background-size: cover;
   background-position: 30% 100%;
   
+}
+#back-container{
+  min-height: 100vh;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
 }
 
 nav h1 {
