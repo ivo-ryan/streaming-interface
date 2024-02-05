@@ -3,11 +3,13 @@ import { FormContainer, MsgSucesso, Valid} from "./style";
 import {BiXCircle} from 'react-icons/bi';
 
 export const Form  = () => {
+    const hide:boolean = true
+
     return (      
         <section id="image">   
         <div id="back-container">
 
-        <Navbar  />
+        <Navbar hide={hide} />
 
         <FormContainer >
 

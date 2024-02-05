@@ -24,6 +24,10 @@ export const SNavbar = styled.header`
                 font-weight: bold ;
                 transition: all .5s ease-in;
                 cursor: pointer;
+
+                &:hover{
+                    background-color: var(--color-principal) ;
+                }
             }
         }
 `;
