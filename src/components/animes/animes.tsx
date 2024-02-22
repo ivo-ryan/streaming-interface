@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Anime } from '../anime/anime';
+import { SectionAnimes } from './style';
 
 
 export const Animes = () => {
@@ -27,9 +28,9 @@ export const Animes = () => {
 
 
     return (
-        <section>
+        <SectionAnimes>
             {
-                animes.map(({name , description , image_url, epsodios} , index) => {
+                animes.map(({name , description , image_url, epsodios,} , index) => {
                     return (
                         <Anime 
                         name={name}
@@ -41,6 +42,6 @@ export const Animes = () => {
                     )
                 })
             }
-        </section>
+        </SectionAnimes>
     )
 }

@@ -1,13 +1,13 @@
 import { AnimeActionTypes } from "./types"
 
 const initialState = {
-    data: []
+    data: {}
 }
 
-export const dataAnimesReducer = (state = initialState , action ) => {
+export const dataAnimesReducer = (state = initialState , action:any ) => {
     if ( action.type === AnimeActionTypes.NEXT_PAGE) {
         return {...state, 
-            data: [...state, action.payload ]
+            data: action.payload
         }
     }
 
