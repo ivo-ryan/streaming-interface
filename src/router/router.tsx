@@ -3,6 +3,7 @@ import { Form } from "../pages/form/form";
 //import { Home } from "../pages/home/home";
 import { Dashboard } from "../pages/dashboard";
 import { Information } from "../pages/information";
+import { FilmeInfo } from "../pages/filmeInfo/filmeInfo";
 
 export const Router = () => {
     return(
@@ -11,7 +12,9 @@ export const Router = () => {
                 <Route path="/" element={<Dashboard/>}/>
                 <Route path="/cadastro" element={<Form/>}/>
 
-                <Route path="/info" element={<Information/>}/>
+                <Route path="/info/:name" element={<Information/>}/>
+
+                <Route path="/filme-info/:name" element={<FilmeInfo/>}/>
             </Routes>
         </BrowserRouter>
     )

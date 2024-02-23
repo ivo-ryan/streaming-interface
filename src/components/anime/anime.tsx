@@ -4,7 +4,8 @@ import { useDispatch } from "react-redux";
 import { animeNextPage } from '../../redux/dataAnimes/actions.js';
 import { AnimesContainer } from "./style.js";
 
-export const Anime = ({ name, description ,  episodios, image_url , key }:AnimesTypes ) => {
+export const Anime = ({ name, description ,  episodios, image_url  }:AnimesTypes ) => {
+    
 
     const dispatch = useDispatch();
 
@@ -13,11 +14,19 @@ export const Anime = ({ name, description ,  episodios, image_url , key }:Animes
     };
 
     return (
-        <Link to={"/info"}>
+        <Link to={`/info/:${name}`}>
 
-            <AnimesContainer key={key}onClick={() => handleAnimeClick()} >
+            <AnimesContainer onClick={() => handleAnimeClick()} >
+
+                <div className="img-block">
+
                 <img src={image_url} alt={name} />
-                <p>{name}</p>
+
+                </div>
+                <div className="text-block">
+                <h3>{name}</h3>
+
+                </div>
             </AnimesContainer>
 
         </Link>

@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-export const AnimesContainer = styled.div`
+export const FilmesContainer = styled.div`
             position: relative;
 
             .img-block{

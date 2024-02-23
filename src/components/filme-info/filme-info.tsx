@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 import { DataContainer, EpContainer, SectionContainer } from "./style";
 
-export const ItemInformation = () => {
-    const { data } = useSelector((rootReducer:any) => rootReducer.dataAnimesReducer)
+export const FilmeItemInfo = () => {
+    const { data } = useSelector((root:any) => root.dataFilmesReducer);
 
 
     return(
@@ -22,18 +22,12 @@ export const ItemInformation = () => {
             </DataContainer>
         
             <EpContainer>
-                <h2>Episódios</h2>
+                <h2>Filme </h2>
 
                 <div className="ep-list">
-                    {
-                        data.episodios.map((ep:any , index:number) => {
-                            return(
-                                <li key={index}>
-                                    <p> <span>{data.name}</span>
-                                        {ep.type}</p></li>
-                            )
-                        })
-                    }
+                   <p>
+                    {data.name}
+                   </p>
                 </div>
             </EpContainer>
 

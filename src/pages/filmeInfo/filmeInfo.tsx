@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { ItemInformation } from "../../components/item-info/itemInfo";
 import { InfoContainer } from "./style";
+import { useSelector } from "react-redux";
+import { FilmeItemInfo } from "../../components/filme-info/filme-info";
 
-export const Information = () => {
+export const FilmeInfo = () => {
     
 
     return(
@@ -18,7 +19,7 @@ export const Information = () => {
 
             </nav>
 
-            <ItemInformation/>
+            <FilmeItemInfo/>
 
 
         </InfoContainer>

@@ -1,6 +1,6 @@
 
 import { Navbar } from '../../components/navbar/navbar';
-import { Animes } from '../../components/animes/animes';
+import { Menu } from '../../components/menu/menu';
 import { DashboardContainer } from './style';
 
 export const Dashboard = () => {
@@ -8,10 +8,15 @@ export const Dashboard = () => {
    
 
     return (
+        
         <DashboardContainer>
             <Navbar/>
 
-            <Animes/>
+            <section>
+
+                <Menu/>
+
+            </section>
 
         </DashboardContainer>
     )
