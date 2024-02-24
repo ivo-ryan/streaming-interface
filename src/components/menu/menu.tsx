@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Anime } from '../anime/anime';
 import { ContainerMenu } from './style';
 import { Filme } from '../filme/filme';
-import { useSelector } from 'react-redux';
+import { Loading } from '../loading/loading';
 
 
 export const Menu = () => {
@@ -15,12 +15,12 @@ export const Menu = () => {
     useEffect(() => {
         const animes = async () => {
 
-            setLoading(false)
+            setLoading(true)
 
             const url:Response = (await fetch(" https://animes-api-k6xs.onrender.com "));
             const res = await url.json();
 
-            setLoading(true)
+            setLoading(false)
 
             setAnimes(res)
         
@@ -31,13 +31,13 @@ export const Menu = () => {
 
     useEffect(() => {
             const fetchData = async () => {
-                setLoading(false)
+                setLoading(true)
 
                 const req = await fetch("https://animes-api-k6xs.onrender.com/filmes")
 
                 const res = await req.json();
 
-                setLoading(true);
+                setLoading(false);
 
                 setFilmes(res)
                 
@@ -52,7 +52,15 @@ export const Menu = () => {
 
     return (
         <>
-        <ContainerMenu>
+
+        {
+            loading && <Loading/>
+        }
+
+        
+
+        <ContainerMenu>    
+
             {
                 animes.map(({name , description , image_url, epsodios,} , index) => {
                     return (

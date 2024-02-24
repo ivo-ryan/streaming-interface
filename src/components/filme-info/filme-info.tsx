@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { DataContainer, EpContainer, SectionContainer } from "./style";
+import { Link } from "react-router-dom";
 
 export const FilmeItemInfo = () => {
     const { data } = useSelector((root:any) => root.dataFilmesReducer);
@@ -24,11 +25,14 @@ export const FilmeItemInfo = () => {
             <EpContainer>
                 <h2>Filme </h2>
 
+
+                <Link to={`/${data.name}/filme`}>
                 <div className="ep-list">
                    <p>
                     {data.name}
                    </p>
                 </div>
+                </Link>
             </EpContainer>
 
 

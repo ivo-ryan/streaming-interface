@@ -31,6 +31,8 @@ export const DataContainer = styled.div`
             font-size: 13px;
             gap: 10px;
 
+
+
             p{  
                 text-align: left;
                 width: 90%;

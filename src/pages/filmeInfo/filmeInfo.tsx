@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { InfoContainer } from "./style";
-import { useSelector } from "react-redux";
+import { InfoContainer } from "./style";;
 import { FilmeItemInfo } from "../../components/filme-info/filme-info";
 
 export const FilmeInfo = () => {

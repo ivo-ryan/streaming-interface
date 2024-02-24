@@ -4,6 +4,8 @@ import { Form } from "../pages/form/form";
 import { Dashboard } from "../pages/dashboard";
 import { Information } from "../pages/information";
 import { FilmeInfo } from "../pages/filmeInfo/filmeInfo";
+import { PlayAnime } from "../pages/playAnime/playAnime";
+import { PlayFilme } from "../pages/playFilme/playFilme";
 
 export const Router = () => {
     return(
@@ -15,6 +17,11 @@ export const Router = () => {
                 <Route path="/info/:name" element={<Information/>}/>
 
                 <Route path="/filme-info/:name" element={<FilmeInfo/>}/>
+
+                <Route path="/:name/video" element={<PlayAnime/>}/>
+
+                <Route path="/:name/filme" element={<PlayFilme/>}/>
+
             </Routes>
         </BrowserRouter>
     )

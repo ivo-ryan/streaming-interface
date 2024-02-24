@@ -1,8 +1,12 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { DataContainer, EpContainer, SectionContainer } from "./style";
+import { Link } from "react-router-dom";
+import { animePlayToVideo } from "../../redux/animePlay/actions";
 
 export const ItemInformation = () => {
     const { data } = useSelector((rootReducer:any) => rootReducer.dataAnimesReducer)
+
+    const dispatch = useDispatch();
 
 
     return(
@@ -15,7 +19,7 @@ export const ItemInformation = () => {
             <img src={data.image_url} alt={data.name} />
 
             <div className="sinopse">
-                <h4>Sinopse :</h4>
+                <h4> Sinopse: </h4>
                 <p>{data.description}</p>
             </div>
 
@@ -28,9 +32,13 @@ export const ItemInformation = () => {
                     {
                         data.episodios.map((ep:any , index:number) => {
                             return(
-                                <li key={index}>
+                               
+                                <Link  to={`/${data.name}/video`} key={index}>
+                                <li onClick={() => dispatch(animePlayToVideo(ep))}>
                                     <p> <span>{data.name}</span>
                                         {ep.type}</p></li>
+
+                                </Link>
                             )
                         })
                     }

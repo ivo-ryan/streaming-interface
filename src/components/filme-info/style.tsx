@@ -49,6 +49,10 @@ export const EpContainer = styled.div`
         background-color: #161616;
         padding: 10px 5px;
 
+        a{
+            width: 100%;
+        }
+
         .ep-list{
             width: 100%;
         }
