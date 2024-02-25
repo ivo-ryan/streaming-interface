@@ -6,7 +6,7 @@ export const PlayInVideo = styled.div`
             justify-content: center;
             flex-direction: column;
             background-color: #1B1B1B;
-            margin: 0 10px;
+            margin: 30px 10px 0;
 
             
             h2{

@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom"
-import { SNavbar } from "./style"
+import { Link } from "react-router-dom";
+import { SNavbar } from "./style";
+import logo from '../../assets/logo.png';
+
 
 export const Navbar = ( { hide }:any ) => {
 
     return (
         <SNavbar>
             <nav>
-                <li><h1>Netflix</h1></li>
+                <li><img src={logo} alt="logo" /></li>
                 <li>    
                         {hide === true ? (
                             <Link to={"/"}>
@@ -27,4 +29,4 @@ export const Navbar = ( { hide }:any ) => {
             </nav>
         </SNavbar>
     )
-}
+};

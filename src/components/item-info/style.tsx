@@ -7,7 +7,7 @@ export const SectionContainer = styled.section`
         background-color: #1A1A1A;
         width: 95%;
         gap: 50px;
-        padding: 10px ;
+        padding: 10px  ;
         margin: 30px 0;
 `;
 

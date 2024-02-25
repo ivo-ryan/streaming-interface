@@ -2,17 +2,26 @@ import {styled} from 'styled-components';
 
 export const SNavbar = styled.header`      
         width: 100%; 
-        height: 14vh;
+        height: 77px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background: rgb(0 0 0 / 40%);
+        background: #1a1a1a;
+        box-shadow: 0 2px 7px 3px #1c1c1c;
 
         nav{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 40px ;
+            padding: 10px ;
+            height: 100%;
+           
+
+            img{
+                width: 200px ;
+                height: 57px;
+                filter: drop-shadow( 0 0 10px #fff);
+            }
 
             button{
                 font-size: 1rem;

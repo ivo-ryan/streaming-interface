@@ -2,19 +2,32 @@ import { useDispatch, useSelector } from "react-redux";
 import { ListEps, PlayInVideo } from "./style";
 import  PosterImg  from '../../assets/poster.jpg';
 import { animePlayToVideo } from "../../redux/animePlay/actions";
+import { useState } from "react";
 
 export const VideoPlay = () => {
 
-    const { video } = useSelector((e:any) => e.animePlayReducer)
+    const [ Bnext, setBNext ] = useState(0)
 
-    const { data } = useSelector((e:any) => e.dataAnimesReducer)
+    const { video } = useSelector((e:any) => e.animePlayReducer);
 
-    const dispatch = useDispatch()
+    console.log(video);
+    
+
+    const { data } = useSelector((e:any) => e.dataAnimesReducer);
+
+    const dispatch = useDispatch();
+
+
+
+    const next = data.episodios;
+    const res = next.filter(( e:any, i:number )=> i === Bnext)
+    console.log(res)
+
 
     return(
         <>
         <PlayInVideo>
-            <h2> {data.name} {video.type}</h2>
+            <h2> {data.name}- {video.type}</h2>
             <div className="container-video">
                 <video src={video.url} controls poster={PosterImg} preload="auto" role="application"> </video>
             </div>
@@ -22,7 +35,9 @@ export const VideoPlay = () => {
 
         <ListEps>
 
-            <div></div>
+            <div>
+                <button onClick={() => setBNext(Bnext + 1)}>Next</button>
+            </div>
             <div className="ep-container">
                 {
                     data.episodios.map((ep:any , index:number) => {
