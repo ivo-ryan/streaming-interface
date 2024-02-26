@@ -8,4 +8,5 @@ export const InfoContainer = styled.main`
             background-image: url("	https://animefire.plus/img/lt/bg.webp");
             background-repeat: no-repeat;
             background-attachment: fixed;
+            
 `;

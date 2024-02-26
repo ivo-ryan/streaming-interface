@@ -5,6 +5,5 @@ export const ContainerPlay = styled.main`
             background-image: url("	https://animefire.plus/img/lt/bg.webp");
             background-repeat: no-repeat;
             background-attachment: fixed;
-
             padding-bottom: 30px;
 `;

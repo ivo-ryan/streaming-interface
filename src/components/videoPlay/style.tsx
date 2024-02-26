@@ -38,6 +38,51 @@ export const PlayInVideo = styled.div`
 
 export const ListEps = styled.div`
         margin: 0 10px;
+        background-color: #1B1B1B;
+        padding: 20px 10px;
+
+        .pagination{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 30px;
+            
+
+            .buttom{
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                padding: 0.5rem 0.75rem;
+                margin-left: -1px;
+                line-height: 1.25;
+                color: #fff;
+                background-color: #181818;
+                border: 1px solid #323232;
+                transition: all .5s ease;
+
+                &:hover{
+                    color:#17a2b8 ;
+                    background-color:#232323;
+                }
+
+            }
+
+            .list-svg{
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                padding: 0.2rem 0.5rem ;
+                
+                svg{
+                    font-size: 25px;
+                    transition: all .5s ease;
+
+                    &:hover{
+                        color: #17a2b8 ;
+                    }
+                }
+            }
+        }
             
 
 
@@ -47,8 +92,8 @@ export const ListEps = styled.div`
                 flex-direction: column;
                 align-items: center;
                 gap: 5px;
-                background-color: #161616;
-                padding: 10px 5px;
+                
+
 
                 li{
                     width: 90%;

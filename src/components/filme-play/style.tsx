@@ -6,11 +6,11 @@ export const PlayInVideo = styled.div`
             justify-content: center;
             flex-direction: column;
             background-color: #1B1B1B;
-            margin: 0 10px;
+            margin: 40px 10px 0 10px;
 
             
             h2{
-                padding: 30px  0;
+                padding: 10px  0;
                 font-size: 16px;
                 text-align: center;
                 width: 100%;
@@ -50,8 +50,9 @@ export const FilmInfo = styled.div`
             }
 
             .decription-container{
-                width: 80%;
-
-                margin-top: 30px;
+                width: 90%;
+                background-color: #232323;
+                padding: 10px 15px;
+                margin-top: 20px;
             }
 `;

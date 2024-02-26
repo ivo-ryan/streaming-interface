@@ -18,9 +18,9 @@ export const SNavbar = styled.header`
            
 
             img{
-                width: 200px ;
-                height: 57px;
-                filter: drop-shadow( 0 0 10px #fff);
+                width: 100px ;
+                height: 67px;
+                filter: drop-shadow( 0 0 5px #fff);
             }
 
             button{

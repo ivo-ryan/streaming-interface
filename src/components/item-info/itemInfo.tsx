@@ -34,7 +34,7 @@ export const ItemInformation = () => {
                             return(
                                
                                 <Link  to={`/${data.name}/video`} key={index}>
-                                <li onClick={() => dispatch(animePlayToVideo(ep))}>
+                                <li onClick={() => dispatch(animePlayToVideo(index))}>
                                     <p> <span>{data.name}</span>
                                         {ep.type}</p></li>
 
