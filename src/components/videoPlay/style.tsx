@@ -10,9 +10,10 @@ export const PlayInVideo = styled.div`
 
             
             h2{
-                padding: 30px  0;
-                font-size: 16px;
+                padding: 20px 0 ;
+                font-size: 19px;
                 text-align: center;
+                font-weight: 500;
                 width: 100%;
 
             }
@@ -20,7 +21,10 @@ export const PlayInVideo = styled.div`
             .container-video{
                 display: flex;
                 justify-content: center;
-                width: 950px ;
+                align-items: center;
+                background-color: #232323;
+                max-width: 930px ;
+                margin: 0 10px ;
                 height: 595px ;
 
 
@@ -84,11 +88,34 @@ export const ListEps = styled.div`
             }
         }
             
+ 
+`;
+
+export const Description = styled.div`
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        padding-bottom: 30px;
+
+        h3{
+            width: 80%;
+            text-align: left;
+        }
+
+        p{  
+            width: 80%;
+            padding: 10px  20px;
+            line-height: 25px;
+            background-color: #232323;
+        }
+`;
 
 
-           .ep-container{
+export const BlockEp = styled.div<{display: string}>`              display: ${props => props.display};
                 width: 100%;
-                display: flex;
                 flex-direction: column;
                 align-items: center;
                 gap: 5px;
@@ -109,5 +136,4 @@ export const ListEps = styled.div`
                         color:  #17a2b8;
                     }
                 }
-           } 
 `;

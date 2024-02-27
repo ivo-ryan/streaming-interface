@@ -1,18 +1,22 @@
 import {styled} from 'styled-components';
 
+export const Container = styled.div`
+        background-color: #1B1B1B;
+        margin: 40px 10px 0 10px;
+`;
+
 export const PlayInVideo = styled.div`
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
-            background-color: #1B1B1B;
-            margin: 40px 10px 0 10px;
+            flex-direction: column;         
 
             
             h2{
-                padding: 10px  0;
-                font-size: 16px;
+                padding: 20px 0;
+                font-size: 19px;
                 text-align: center;
+                font-weight: 500;
                 width: 100%;
 
             }
@@ -20,8 +24,11 @@ export const PlayInVideo = styled.div`
             .container-video{
                 display: flex;
                 justify-content: center;
-                width: 950px ;
+                align-items: center;
+                max-width: 930px ;
+                margin: 0 10px ;
                 height: 595px ;
+                background-color: #232323;
 
                 video{            
                     width: 95%;
@@ -37,22 +44,23 @@ export const PlayInVideo = styled.div`
 
 
 export const FilmInfo = styled.div`
-            display: flex;
-            align-items: center;
-            justify-content: center;
+             display: flex;
             flex-direction: column;
-            background-color: #1B1B1B;
-            margin: 0 10px ;
-            padding-bottom: 30px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
+            padding: 30px 0;
 
             h2{
-                padding-top: 40px;
+                width: 80%;
+                text-align: left;
             }
 
-            .decription-container{
-                width: 90%;
+            p{  
+                width: 80%;
+                padding: 10px  20px;
+                line-height: 25px;
                 background-color: #232323;
-                padding: 10px 15px;
-                margin-top: 20px;
             }
 `;

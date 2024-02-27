@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { ListEps, PlayInVideo } from "./style";
+import * as S from "./style";
 import  PosterImg  from '../../assets/poster.jpg';
 import { animePlayToVideo } from "../../redux/animePlay/actions";
 import { useState } from "react";
@@ -12,8 +12,6 @@ export const VideoPlay = () => {
     const [ Bnext, setBNext ] = useState<number>(video)
     const back:number = Bnext ;
     
-    
-
     const { data } = useSelector((e:any) => e.dataAnimesReducer);
 
     const dispatch = useDispatch();
@@ -21,11 +19,28 @@ export const VideoPlay = () => {
     const next:[] = data.episodios;
     const limit:number = next.length;
     const res = next.filter(( e:object , i:number )=> i === Bnext);
+
+    const showList = {
+        view: "flex",
+        hide: "none"
+    }
+
+    const [ display, setDisplay ] = useState<string>(showList.hide)
+
+    const handleClickToShowList = () => {
+        if (display === showList.hide) {
+            setDisplay(showList.view)
+        }
+
+        if (display === showList.view) {
+            setDisplay(showList.hide)
+        }
+    }
     
 
     return(
         <>
-        <PlayInVideo>
+        <S.PlayInVideo>
             {
                 res.map((play:any, index: number) => {
                     return (
@@ -42,9 +57,9 @@ export const VideoPlay = () => {
                 })
             }
            
-        </PlayInVideo>
+        </S.PlayInVideo>
 
-        <ListEps>
+        <S.ListEps>
             <div className="pagination">
 
             
@@ -62,7 +77,7 @@ export const VideoPlay = () => {
                 }
              </div>
 
-            <div className="list-svg">
+            <div className="list-svg" onClick={() => handleClickToShowList()}>
 
             <AiOutlineMenu/>
 
@@ -83,8 +98,17 @@ export const VideoPlay = () => {
             </div>
 
             </div>
+
+            <S.Description>
+                <h3>Informações :</h3>
+                <p><span>sinopse: </span>
+                {
+                    data.description
+                }
+                </p>
+            </S.Description>
             
-            <div className="ep-container" >
+            <S.BlockEp display={display}>
                 
                 {
                     data.episodios.map((ep:any , index:number) => {
@@ -96,9 +120,9 @@ export const VideoPlay = () => {
                         )
                     })
                 }
-            </div>
+            </S.BlockEp>
             
-        </ListEps>
+        </S.ListEps>
         </>
     )
 }

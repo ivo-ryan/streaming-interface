@@ -29,13 +29,15 @@ export const DataContainer = styled.div`
         .sinopse{
             display: flex;
             font-size: 13px;
+            padding-left: 20px;
             gap: 10px;
+            line-height: 20px;
 
 
 
             p{  
                 text-align: left;
-                width: 90%;
+                width: 80%;
                 color: #ccc7c7 ;
                 font-size: 13px;
             }

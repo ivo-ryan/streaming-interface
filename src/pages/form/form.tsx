@@ -1,57 +1,20 @@
+import { Cadastro } from "../../components/cadastro/cadastro";
 import { Navbar } from "../../components/navbar/navbar";
-import { FormContainer, MsgSucesso, Valid} from "./style";
-import {BiXCircle} from 'react-icons/bi';
+import * as S from './style'
+
 
 export const Form  = () => {
     const hide:boolean = true
 
     return (      
         <section id="image">   
-        <div id="back-container">
+                <S.BackContainer>
 
-        <Navbar hide={hide} />
+                <Navbar hide={hide} />
 
-        <FormContainer >
+                <Cadastro/>   
 
-            <div className="container">
-                <header>
-                    <h1>Cadastre-se</h1>
-                </header>
-        <div className="form-container">
-
-            <form >
-
-                <div className="input">
-                    <label htmlFor="name">Email ou número de telefone</label>
-                    <input type="text" name="nome" id="name"/>
-                </div>
-                <Valid> <BiXCircle/> <p>Informe um email ou número de telefone válido!</p> </Valid>
-
-                <div className="input">
-                    <label htmlFor="password">Senha</label>
-                    <input type="password" name="senha" id="password"/>
-                </div>
-                    <Valid>
-                    <BiXCircle/>
-                        <p>A senha deve ter entre 4 e 15 caracteres!</p>
-                    </Valid>
-                <div className="submit">
-                    
-                    <button>Entrar</button>
-                </div>
- 
-            </form>
-
-                </div> 
-
-                <MsgSucesso>
-                    <p>Usuário cadastrado com sucesso!</p>
-                </MsgSucesso>  
-
-            </div>
-            </FormContainer>
-
-        </div>
+                </S.BackContainer>
         </section>
 
     )
