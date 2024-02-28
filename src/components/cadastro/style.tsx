@@ -10,67 +10,6 @@ export const FormContainer = styled.div`
         border-radius: 10px;
         margin-top: 30px;
         
-        .container{
-
-        .form-container{
-            width: 100%;
-            
-            form{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                width: 100%;
-                
-                
-                .input{
-                    display: flex;
-                    flex-direction: column;
-                    width: 100%;
-                    padding: 10px 20px ;
-                    background-color: transparent;
-                    border-radius: 4px;
-                    color: rgba(255, 255, 255, 0.7);
-                    border: 1px solid rgba(255, 255, 255, 0.7);
-                    font-size: 14px;
-   
-                    
-                    input{
-                        background-color: transparent;
-                        color: var(--color);
-                        min-height: 16px;
-                        min-width: 16px;
-                        outline: none;
-                        border: none;
-                        font-size: 16px;
-                        line-height: 1.5 ;
-                    }
-                    
-                }
-                
-            }
-                .submit{
-                    width: 100%;
-                    margin-top: 10px ;
-                    button{
-                        width: 100%;
-                        font-size: 1rem;
-                        background-color:rgb(229, 9, 20) ;
-                        color: var(--color);
-                        padding: 11px 6px;
-                        border: none;
-                        border-radius: 4px;
-                        cursor: pointer;
-                        transition: all .5s ease ;
-
-                        &:hover{
-                            background-color: var(--color-principal) ;
-                        }
-
-                    }
-                }
-            }
-        }
         
 `;
 
@@ -102,22 +41,41 @@ export const FormC = styled.div`
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
+                gap: 30px;
                 width: 100%;}
 `;
 
-export const InputContainer = styled.div`
+export const InputContainer = styled.div<{colorb: string}>`
                     display: flex;
                     flex-direction: column;
                     width: 100%;
                     padding: 10px 20px ;
+                    margin-bottom: 5px;
+                    background-color: transparent;
+                    border-radius: 4px;
+                    color: #ffffffb2 ;
+                    border: 1px solid ${p => p.colorb};
+                    font-size: 14px;               
+                   
+`;
+export const InputContainerPass = styled.div<{colorb: string}>`
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    padding: 10px 20px ;
+                    margin-bottom: 5px;
                     background-color: transparent;
                     border-radius: 4px;
                     color: rgba(255, 255, 255, 0.7);
-                    border: 1px solid rgba(255, 255, 255, 0.7);
-                    font-size: 14px;
-   
-                    
-                    input{
+                    border: 1px solid ${p => p.colorb};
+                    font-size: 14px;               
+                   
+`;
+
+export const BoxInput = styled.div`
+            width: 100%;
+
+            input{
                         background-color: transparent;
                         color: var(--color);
                         min-height: 16px;
@@ -165,15 +123,31 @@ export const MsgSucesso = styled.div`
 
 `;
 
-export const Valid = styled.div`
-            display: flex;
+export const Valid = styled.div<{display:string}>`
+            display: ${ props => props.display };
             justify-content: flex-start;
             align-items: center;
             width: 100%;
             gap: 5px;
             color: rgb(229, 9, 20);
             font-size: 14px;
-            padding: 4px 0px 15px 0px ;
+           
+
+            p{
+                color: rgb(229, 9, 20);
+            }
+`;
+
+
+export const ValidPass = styled.div<{display: string}>`
+            display: ${ props => props.display };
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            gap: 5px;
+            color: rgb(229, 9, 20);
+            font-size: 14px;
+           
 
             p{
                 color: rgb(229, 9, 20);

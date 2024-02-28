@@ -29,7 +29,7 @@ export const Home = () => {
                     <ContainerButtom>
 
                         <InputContainer>
-                            <label htmlFor="login">Email ou número de telefone</label>
+                            <label htmlFor="login">Email </label>
 
                             <input type="text" id="login" />
                         </InputContainer>
