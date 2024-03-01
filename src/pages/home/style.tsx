@@ -74,9 +74,18 @@ export const ContainerButtom = styled.div`
                 background-color: var(--color-principal) ;
             }
         }
+
+        a{
+            width: 30%;
+
+            button{
+                width: 100%;
+                height: 100%;
+            }
+        }
 `;
 
-export const InputContainer = styled.div`
+export const InputContainer = styled.div<{colorb: string}>`
         display: flex;
         width: 70%;
         flex-direction: column;
@@ -84,10 +93,14 @@ export const InputContainer = styled.div`
         background-color: var(--box-animate) ;
         border-radius: 4px;
         color: rgba(255, 255, 255, 0.7);
-        border: 1px solid rgba(255, 255, 255, 0.7);
+        border: 1px solid ${props => props.colorb};
         font-size: 14px;
 
-    
+        
+        label{
+            text-align: left;
+        }
+
     input{
         background-color: transparent;
         color: var(--color);

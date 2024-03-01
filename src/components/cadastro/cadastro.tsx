@@ -2,6 +2,7 @@ import { BiXCircle } from 'react-icons/bi';
 import * as S from './style';
 import { FormEvent, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export const Cadastro = () => {
 
@@ -27,7 +28,8 @@ const [ displayPass, setDisplayPass ] = useState<string>(msg.hide);
 
 const [ user, setUser ] = useState<string>("");
 const [ password , setPassword ] = useState<string>("");
-const [ loading, setLoading ] = useState<boolean>(false)
+const [ loading, setLoading ] = useState<boolean>(false);
+const [ dispatch, setDispatch ] = useState(false)
 
 
   const handleChangeToEmail = (event:any) => {
@@ -67,10 +69,10 @@ const [ loading, setLoading ] = useState<boolean>(false)
         return
     }
 
-    console.log(user);
-    console.log(password);
     
     setLoading(true)
+    
+    setDispatch(true);
     const api =  axios.create({
         baseURL: "https://animes-api-k6xs.onrender.com"
     })
@@ -80,8 +82,7 @@ const [ loading, setLoading ] = useState<boolean>(false)
         senha: password
     })
 
-    setLoading(false)
-    console.log(response)
+    setLoading(false);
 
   }
 
@@ -136,8 +137,15 @@ const [ loading, setLoading ] = useState<boolean>(false)
 
             </S.BoxInput> 
             <S.Submit>
+                {
+                    dispatch === true ? 
+                    <Link to={"/dashboard"}>
+                         <button >Entrar</button>
+                    </Link>
+                    :
+                    <button>Cadastrar</button>
+                }
                 
-                <button>Entrar</button>
             </S.Submit>
 
         </form>

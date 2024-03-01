@@ -2,35 +2,51 @@ import { Apresentação, ContainerButtom, ContainerValidate, InputContainer, Log
 import { Navbar } from "../../components/navbar/navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
+interface Data {
+    email: string,
+    _id: string,
+    senha: string
+}
 
 export const Home = () => {
 
+    const borderColor = {
+        notValid: "red",
+        padrao: "#ffffffb2",
+    };
+
     const [ emailPass , setEmailPass ] = useState<string>('');
-    const [ user, setUser ] = useState([]);
+    const [ user, setUser ] = useState<Data[]>([]);
+    const [ valid, setValid ] = useState<string>(borderColor.padrao);
 
     useEffect(() => {
         const fetchData = async () => {
             const api = await axios.get("https://animes-api-k6xs.onrender.com/user");
-            const res = api.data;
-            console.log(res);
-            
-           setUser(res)
-            
+            const res = api.data;            
+           setUser(res);          
         }
 
         fetchData()
 
     },[])
+
+    const data = user.filter((e:Data) => {return e.email === emailPass});
+    const emailRes = data.map((e:Data) => e.email); 
     
-    
+    const handleClick = () => {
+        
+        if (emailRes[0]  !== emailPass) {
+            return setValid(borderColor.notValid);
+            
+        }
+
+    }
+      
 
     const handleEmail = (event:any) => {
-        setEmailPass(event.target.value)
-
-       const data = user.filter((e:any) => {return e.email === emailPass})
-
-
-        
+        setEmailPass(event.target.value);
     }
 
     return (
@@ -59,14 +75,26 @@ export const Home = () => {
 
                     <ContainerButtom>
 
-                        <InputContainer>
+                        <InputContainer colorb={valid}>
                             <label htmlFor="login">Email </label>
 
                             <input type="text" id="login" onChange={handleEmail}/>
                         </InputContainer>
-                    <button>
+
+                    {
+                        emailRes[0] === emailPass ? (
+                            <Link to={"/dashboard"}>
+                        <button onClick={handleClick}>
+                            Entrar
+                        </button>
+                            </Link>
+                        ): 
+                        <button onClick={handleClick}>
                         Entrar
-                    </button>
+                        </button>
+                    }
+                    
+
                     </ContainerButtom>
                 </ContainerValidate>
             </LoginContainer>
