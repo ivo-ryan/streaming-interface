@@ -3,12 +3,8 @@ import { Navbar } from "../../components/navbar/navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { Data } from "../../types/userHomeTypes";
 
-interface Data {
-    email: string,
-    _id: string,
-    senha: string
-}
 
 export const Home = () => {
 
@@ -30,9 +26,9 @@ export const Home = () => {
 
         fetchData()
 
-    },[])
+    },[]);
 
-    const data = user.filter((e:Data) => {return e.email === emailPass});
+    const data = user.filter((e:Data ) => {return e.email === emailPass});
     const emailRes = data.map((e:Data) => e.email); 
     
     const handleClick = () => {
@@ -49,12 +45,14 @@ export const Home = () => {
         setEmailPass(event.target.value);
     }
 
+    const hide:boolean = true
+
     return (
         <div id="home">
 
             <div id="back-container">
 
-              <Navbar/>
+              <Navbar hide={hide}/>
 
             <LoginContainer>
 

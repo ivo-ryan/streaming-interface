@@ -5,6 +5,11 @@ import { animePlayToVideo } from "../../redux/animePlay/actions";
 import { useState } from "react";
 import { AiOutlineArrowRight , AiOutlineArrowLeft , AiOutlineMenu } from 'react-icons/ai';
 
+interface Ep {
+    type: string,
+    url: string
+}
+
 export const VideoPlay = () => {
 
     const { video } = useSelector((e:any) => e.animePlayReducer);
@@ -23,7 +28,7 @@ export const VideoPlay = () => {
     const showList = {
         view: "flex",
         hide: "none"
-    }
+    };
 
     const [ display, setDisplay ] = useState<string>(showList.hide)
 
@@ -42,14 +47,15 @@ export const VideoPlay = () => {
         <>
         <S.PlayInVideo>
             {
-                res.map((play:any, index: number) => {
+                res.map((play:Ep, index: number) => {
                     return (
                         <>
-                        <h2> {data.name}- {play.type}</h2>
+                        <h2 > {data.name}- {play.type}</h2>
                         <div 
-                        key={index}
+                        key={index }
                         className="container-video">
-                            <video src={play.url} controls poster={PosterImg} preload="auto" role="application"> </video>
+                            <video src={play.url} controls poster={PosterImg} preload="auto" role="application"
+                            > </video>
                         </div>
                         </>
 
@@ -111,10 +117,10 @@ export const VideoPlay = () => {
             <S.BlockEp display={display}>
                 
                 {
-                    data.episodios.map((ep:any , index:number) => {
+                    data.episodios.map((ep:Ep , index:number) => {
                         return (
                             <li onClick={() => dispatch(animePlayToVideo(index), setBNext( index))} key={index}>
-                                <p>
+                                <p >
                                     {ep.type}</p></li>
 
                         )

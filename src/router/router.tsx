@@ -15,9 +15,9 @@ export const Router = () => {
                 <Route path="/cadastro" element={<Form/>}/>
                 <Route path="/dashboard" element={<Dashboard/>}/>
 
-                <Route path="/info/:name" element={<Information/>}/>
+                <Route path="/info" element={<Information/>}/>
 
-                <Route path="/filme-info/:name" element={<FilmeInfo/>}/>
+                <Route path="/filme-info" element={<FilmeInfo/>}/>
 
                 <Route path="/:name/video" element={<PlayAnime/>}/>
 

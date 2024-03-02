@@ -10,12 +10,12 @@ const valid = {
     checked: "green",
     notValid: "red",
     padrao: "#ffffffb2"
-}
+};
 
 const msg = {
     view: "flex",
     hide: "none"
-}
+};
 
 
 const re:RegExp =
@@ -67,8 +67,13 @@ const [ dispatch, setDispatch ] = useState(false)
 
     if (!user.length || !password.length) {
         return
-    }
+    };
 
+    if (password.length >= 4 || password.length > 15 || re.test(user) ) {
+        return 
+        
+    }
+    
     
     setLoading(true)
     

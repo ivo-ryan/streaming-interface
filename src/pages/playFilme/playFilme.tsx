@@ -8,7 +8,7 @@ export const PlayFilme = () => {
 
     return (
         <ContainerPlay>
-            <Navbar/>
+            <Navbar navigation="/filme-info"/>
             <FilmePlay/>
         </ContainerPlay>
     )

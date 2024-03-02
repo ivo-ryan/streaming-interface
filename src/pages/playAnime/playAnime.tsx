@@ -7,7 +7,7 @@ export const PlayAnime = () => {
 
     return (
         <ContainerPlay>
-            <Navbar/>
+            <Navbar navigation="/info"/>
             <VideoPlay/>
         </ContainerPlay>
     )

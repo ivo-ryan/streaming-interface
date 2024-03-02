@@ -10,7 +10,7 @@ export const Dashboard = () => {
     return (
         
         <DashboardContainer>
-            <Navbar/>
+            <Navbar navigation="/"/>
 
             <section>
 

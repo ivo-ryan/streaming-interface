@@ -14,7 +14,7 @@ export const Anime = ({ name, description ,  episodios, image_url  }:AnimesTypes
     };
 
     return (
-        <Link to={`/info/:${name}`}>
+        <Link to={"/info"}>
 
             <AnimesContainer onClick={() => handleAnimeClick()} >
 

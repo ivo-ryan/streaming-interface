@@ -3,29 +3,36 @@ import { SNavbar } from "./style";
 import logo from '../../assets/logo.png';
 
 
-export const Navbar = ( { hide }:any ) => {
-
+export const Navbar = ( { hide , navigation}:any ) => {
+    
     return (
         <SNavbar>
             <nav>
-                <li><img src={logo} alt="logo" /></li>
-                <li>    
-                        {hide === true ? (
-                            <Link to={"/"}>
-                            <button>
-                                Voltar
-                            </button>
-                    </Link>
-                        ) : (
+                  
+                        {hide === true ? (<>
+                             <li><img src={logo} alt="logo" /></li>
+
+                        <li> 
                             <Link to={"/cadastro"}>
-                        <button>
-                            Cadastre-se
-                        </button>
-                </Link>
+                            <button>
+                                Cadastre-se
+                            </button>
+                            </Link>
+                        </li>
+                    </>
+                   
+                        ) : (
+                
+                            <li>
+                                <Link to={navigation}>
+                                <img src={logo} alt="logo" />
+                                </Link>
+                                </li>
+               
                         )}
                         
 
-                </li>
+                
             </nav>
         </SNavbar>
     )

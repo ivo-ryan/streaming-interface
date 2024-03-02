@@ -20,7 +20,24 @@ export const SNavbar = styled.header`
             img{
                 width: 100px ;
                 height: 67px;
-                filter: drop-shadow( 0 0 5px #fff);
+            }
+
+            a{
+                width: 100px;
+                height: 67px;
+                
+                img{
+                    width: 100px;
+                    height: 67px;
+                    transition: all .5s ease-in;
+                }
+
+                &:hover{
+                    img{
+                        filter: drop-shadow( 0 0 5px #fff);
+                        transform: scale(1.2);
+                    }
+                }
             }
 
             button{

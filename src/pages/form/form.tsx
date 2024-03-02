@@ -4,13 +4,12 @@ import * as S from './style'
 
 
 export const Form  = () => {
-    const hide:boolean = true
 
     return (      
         <section id="image">   
                 <S.BackContainer>
 
-                <Navbar hide={hide} />
+                <Navbar navigation="/"/>
 
                 <Cadastro/>   
 

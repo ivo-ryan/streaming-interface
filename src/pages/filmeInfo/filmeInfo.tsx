@@ -1,22 +1,13 @@
-import { Link } from "react-router-dom";
 import { InfoContainer } from "./style";;
 import { FilmeItemInfo } from "../../components/filme-info/filme-info";
+import { Navbar } from "../../components/navbar/navbar";
 
 export const FilmeInfo = () => {
     
 
     return(
         <InfoContainer>
-             <nav>
-                <li><h1>Netflix</h1></li>
-                <li>    
-                      <Link to={"/"}>
-                        <button>Voltar</button>
-                        </Link> 
-
-                </li>
-
-            </nav>
+             <Navbar navigation="/dashboard"/>
 
             <FilmeItemInfo/>
 

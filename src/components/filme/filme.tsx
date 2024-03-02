@@ -13,7 +13,7 @@ export const Filme = ({ name, description ,  filme_url , image_url  }:FilmesType
     };
 
     return (
-        <Link to={`/filme-info/${name}`}>
+        <Link to={`/filme-info`}>
 
             <FilmesContainer  onClick={() => handleFilmeClick()} >
 
