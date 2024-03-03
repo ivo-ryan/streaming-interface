@@ -20,7 +20,7 @@ export const Container = styled.div`
             gap: 20px;
             flex-direction: column;
             background-color: var(--bg-color-login);
-            min-height: 500px ;
+            height: 500px ;
             width: 450px;
             padding: 48px 68px ;
             backdrop-filter: blur(14px);
@@ -31,10 +31,18 @@ export const Container = styled.div`
                 justify-content: flex-start;
                 font-size: 20px;
             }
+
+            @media (max-width: 425px) {
+                width: 80%;
+                padding: 20px 40px;
+                height: 100%;
+                
+            }
 `;
 
 export const FormC = styled.div`
             width: 100%;
+            height: 100%;
             
             form{
                 display: flex;
@@ -119,6 +127,10 @@ export const MsgSucesso = styled.div`
 
             p{
                 color: #004085;
+            }
+
+            @media (max-width: 425px) {
+                margin-top: 10px;
             }
 
 `;

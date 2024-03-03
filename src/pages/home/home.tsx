@@ -1,4 +1,4 @@
-import { Apresentação, ContainerButtom, ContainerValidate, InputContainer, LoginContainer } from "./style";
+import * as S from "./style";
 import { Navbar } from "../../components/navbar/navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -54,30 +54,36 @@ export const Home = () => {
 
               <Navbar hide={hide}/>
 
-            <LoginContainer>
+            <S.LoginContainer>
 
-                <Apresentação>
+                <S.Apresentação>
+                    <S.ContainerH2>
+
                     <h2>
                         Os maiores sucessos do mundo dos animes.
                     </h2>
                      
+                    </S.ContainerH2>
+                    <S.ContainerText>
+
                      <p>
                         Assista seus animes quando quiser
                      </p>
-                </Apresentação>
+                    </S.ContainerText>
+                </S.Apresentação>
 
-                <ContainerValidate>
+                <S.ContainerValidate>
                     <p>
                         Quer assistir? Informe seu email cadastrado.
                     </p>
 
-                    <ContainerButtom>
+                    <S.ContainerButtom>
 
-                        <InputContainer colorb={valid}>
+                        <S.InputContainer colorb={valid}>
                             <label htmlFor="login">Email </label>
 
                             <input type="text" id="login" onChange={handleEmail}/>
-                        </InputContainer>
+                        </S.InputContainer>
 
                     {
                         emailRes[0] === emailPass ? (
@@ -93,9 +99,9 @@ export const Home = () => {
                     }
                     
 
-                    </ContainerButtom>
-                </ContainerValidate>
-            </LoginContainer>
+                    </S.ContainerButtom>
+                </S.ContainerValidate>
+            </S.LoginContainer>
             </div>           
         </div>
     )

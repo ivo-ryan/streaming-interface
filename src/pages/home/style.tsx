@@ -7,32 +7,54 @@ export const LoginContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         background: rgb(0 0 0 / 40%);
-        position: relative;
 
 `;
 
 export const Apresentação = styled.div`
-        position: absolute;
-        width: 50%;
-        top: 130px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 50%;
+        width: 80%;
         gap: 16px;
+
+        @media (max-width: 768px) {
+            width: 80%;
+        }
+
+        @media (max-width: 425px) {
+            width: 90%;
+            height: 70%;
+        }
+`;
+
+export const ContainerH2 = styled.div`
 
         h2{
             text-align: center;
             font-size: 50px;
         }
 
-        p{
+        @media (max-width: 425px){
+                h2{
+                    font-size: 30px;
+                }
+        }
+
+`;
+
+export const ContainerText = styled.div`
+         p{
             font-size: 1.3rem;
         }
 
-        @media (max-width: 768px) {
-            width: 80%;
+        @media (max-width: 425px) {
+            p{
+                font-size: large;
+            }
         }
 `;
 
@@ -40,9 +62,8 @@ export const ContainerValidate = styled.div`
         display: flex;
         flex-direction: column;
         text-align: center;
-        position: absolute;
         width: 50%;
-        bottom: 100px;
+        margin-bottom: 100px;
         gap: 16px;
 
         p{
@@ -51,6 +72,13 @@ export const ContainerValidate = styled.div`
 
         @media (max-width: 768px) {
             width: 85%;
+        }
+
+        @media (max-width: 425px) {
+            width: 95%;
+            p{
+                font-size: large;
+            }
         }
 `;
 
@@ -81,6 +109,16 @@ export const ContainerButtom = styled.div`
             button{
                 width: 100%;
                 height: 100%;
+            }
+        }
+
+        @media (max-width: 425px) {
+            button{
+                font-size: large;
+            }
+
+            a{
+                font-size: large;
             }
         }
 `;
