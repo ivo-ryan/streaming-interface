@@ -23,7 +23,12 @@ export const VideoPlay = () => {
 
     const next:[] = data.episodios;
     const limit:number = next.length;
-    const res = next.filter(( e:object , i:number )=> i === Bnext);
+    const res = next.filter(( emai:object , i:number ) => { return i === Bnext  
+  emai
+});
+
+console.log(res);
+
 
     const showList = {
         view: "flex",

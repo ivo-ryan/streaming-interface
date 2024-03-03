@@ -69,8 +69,8 @@ const [ dispatch, setDispatch ] = useState(false)
         return
     };
 
-    if (password.length >= 4 || password.length > 15 || re.test(user) ) {
-        return 
+    if (password.length <= 4 || password.length > 15 || re.test(user) === false ) {
+        return   
         
     }
     
@@ -86,6 +86,9 @@ const [ dispatch, setDispatch ] = useState(false)
         email: user,
         senha: password
     })
+
+    console.log(response.status);
+
 
     setLoading(false);
 
