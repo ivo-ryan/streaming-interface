@@ -53,6 +53,7 @@ export const VideoPlay = () => {
                     return (
                         <>
                         <h2 > {data.name}- {play.type}</h2>
+                        <meta itemProp="thumbnailUrl" content={play.url}/>
                         <div 
                         key={index }
                         className="container-video">
