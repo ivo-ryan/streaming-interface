@@ -27,9 +27,6 @@ export const VideoPlay = () => {
   emai
 });
 
-console.log(res);
-
-
     const showList = {
         view: "flex",
         hide: "none"
