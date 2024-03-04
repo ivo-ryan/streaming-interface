@@ -17,6 +17,11 @@ export const DashboardContainer = styled.main`
             background-attachment: fixed;
         }
         
+        @media (max-width: 425px) {
+            background-image: url("	https://animefire.plus/img/lt/bg.webp");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
 
         section{
             padding-top: 50px;
