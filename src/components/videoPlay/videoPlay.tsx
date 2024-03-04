@@ -56,8 +56,7 @@ export const VideoPlay = () => {
                         <div 
                         key={index }
                         className="container-video">
-                            <video src={play.url} controls poster={PosterImg} preload="auto" role="application"
-                            tabIndex={-1}
+                            <video src={play.url} controls poster={PosterImg} preload="auto" 
                             > </video>
                         </div>
                         </>

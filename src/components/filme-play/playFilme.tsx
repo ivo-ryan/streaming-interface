@@ -11,7 +11,7 @@ export const FilmePlay = () => {
         <S.PlayInVideo>
             <h2> {data.name}</h2>
             <div className="container-video">
-                <video src={data.filme_url} controls poster={PosterImg} preload="auto" role="application"> </video>
+                <video src={data.filme_url} controls poster={PosterImg} preload="auto"> </video>
             </div>
         </S.PlayInVideo>
 
