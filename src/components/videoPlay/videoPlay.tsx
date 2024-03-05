@@ -56,8 +56,9 @@ export const VideoPlay = () => {
                         <meta itemProp="thumbnailUrl" content={play.url}/>
                         <div 
                         key={index }
-                        className="container-video">
-                            <video src={play.url} controls poster={PosterImg} preload="auto" 
+                        className="container-video"
+                        >
+                            <video src={play.url} controls poster={PosterImg} 
                             > </video>
                         </div>
                         </>

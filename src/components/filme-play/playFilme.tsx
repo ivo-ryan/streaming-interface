@@ -12,7 +12,7 @@ export const FilmePlay = () => {
             <h2> {data.name}</h2>
             <meta itemProp="thumbnailUrl" content={data.filme_url}/>
             <div className="container-video">
-                <video src={data.filme_url} controls poster={PosterImg} preload="auto"> </video>
+                <video src={data.filme_url} controls poster={PosterImg} > </video>
             </div>
         </S.PlayInVideo>
 
