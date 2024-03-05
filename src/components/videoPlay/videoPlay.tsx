@@ -58,8 +58,10 @@ export const VideoPlay = () => {
                         key={index }
                         className="container-video"
                         >
-                            <video src={play.url} controls poster={PosterImg} 
-                            > </video>
+                            <video controls poster={PosterImg} 
+                            > 
+                                <source src={play.url} />
+                            </video>
                         </div>
                         </>
 
