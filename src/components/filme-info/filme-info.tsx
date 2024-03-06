@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
 export const FilmeItemInfo = () => {
-    
+
 const { id } = useParams();
 
 const [ filme, setFilme ] = useState<string>('');
@@ -22,7 +22,6 @@ useEffect(() => {
         setFilme(name)
         setDescript(description)
         setImage(image_url)
-        console.log(res);
         
     }
 

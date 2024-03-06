@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 
 export const PlayAnime = () => {
     const { id } = useParams();
-    console.log(id);
     
 
     return (

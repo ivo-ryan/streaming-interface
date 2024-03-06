@@ -34,6 +34,8 @@ export const FilmePlay = () => {
         <S.PlayInVideo>
             <h2> {filme}</h2>
             <meta itemProp="thumbnailUrl" content={url}/>
+            <meta name="google-site-verification" content="quSgRZsi5fhXZXd4-URcrB6F6BnLy09y0A13_E1kVJA" />
+            <meta name="p:domain_verify" content="8db0a86299b3e90666e165686fe012be" />
             <div className="container-video">
                 <video controls autoPlay poster={PosterImg} src={url}>
                      </video>
