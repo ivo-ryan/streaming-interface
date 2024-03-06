@@ -41,8 +41,6 @@ export const FilmePlay = () => {
             </div>
         </S.PlayInVideo>
 
-        <video src="https://lightspeedst.net/s4/mp4/jujutsu-kaisen-0-movie-dublado/sd/1.mp4" controls autoPlay></video>
-
         <S.FilmInfo>
             <h2>informações : </h2>              
                 <p>
