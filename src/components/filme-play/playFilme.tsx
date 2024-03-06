@@ -39,6 +39,7 @@ export const FilmePlay = () => {
                 <video controls autoPlay poster={PosterImg} src={url}>
                      </video>
             </div>
+            
         </S.PlayInVideo>
 
         <S.FilmInfo>
