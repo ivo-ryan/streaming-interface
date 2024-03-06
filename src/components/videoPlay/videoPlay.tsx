@@ -70,8 +70,7 @@ export const VideoPlay = () => {
                         <div key={index}>
                         <h2 > {anime}- {play.type}</h2>
                         <meta itemProp="thumbnailUrl" content={play.url}/>
-                        <meta name="google-site-verification" content="quSgRZsi5fhXZXd4-URcrB6F6BnLy09y0A13_E1kVJA" />
-                        <meta name="p:domain_verify" content="8db0a86299b3e90666e165686fe012be" />
+
                         <div 
                         className="container-video"
                         >
