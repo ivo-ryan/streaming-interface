@@ -1,19 +1,41 @@
-import { useSelector } from "react-redux";
 import * as S from "./style";
 import  PosterImg  from '../../assets/poster.jpg';
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export const FilmePlay = () => {
 
-    const { data } = useSelector((e:any) => e.dataFilmesReducer)
+    const { id } = useParams();
+
+    const [ filme, setFilme ] = useState<string>('');
+    const [ url , setUrl ] = useState<string>('')
+    const [ descript, setDescript ] = useState<string>('');
+
+    useEffect(() => {
+    const fetchData = async () => {
+        const req = await axios.get(`https://animes-api-k6xs.onrender.com/filmes/${id}`)
+
+        const res = await req.data;
+
+        const { name , description , filme_url } = res;
+
+        setFilme(name)
+        setDescript(description)
+        setUrl(filme_url)
+        
+    }
+
+    fetchData()
+}, [])
 
     return(
         <S.Container>
         <S.PlayInVideo>
-            <h2> {data.name}</h2>
-            <meta itemProp="thumbnailUrl" content={data.filme_url}/>
+            <h2> {filme}</h2>
+            <meta itemProp="thumbnailUrl" content={url}/>
             <div className="container-video">
-                <video controls poster={PosterImg} >
-                    <source src={data.filme_url} />
+                <video controls autoPlay poster={PosterImg} src={url}>
                      </video>
             </div>
         </S.PlayInVideo>
@@ -23,7 +45,7 @@ export const FilmePlay = () => {
                 <p>
                 <span>sinopse : </span>
                 {
-                    data.description
+                    descript
                 }
                 </p>
 

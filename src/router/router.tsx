@@ -15,13 +15,13 @@ export const Router = () => {
                 <Route path="/cadastro" element={<Form/>}/>
                 <Route path="/dashboard" element={<Dashboard/>}/>
 
-                <Route path="/info" element={<Information/>}/>
+                <Route path="/info/:id" element={<Information/>}/>
 
-                <Route path="/filme-info" element={<FilmeInfo/>}/>
+                <Route path="/filme-info/:id" element={<FilmeInfo/>}/>
 
-                <Route path="/:name/video" element={<PlayAnime/>}/>
+                <Route path="/video/:id/:index" element={<PlayAnime/>}/>
 
-                <Route path="/:name/filme" element={<PlayFilme/>}/>
+                <Route path="/filme/:id" element={<PlayFilme/>}/>
 
             </Routes>
         </BrowserRouter>

@@ -62,13 +62,12 @@ export const Menu = () => {
         <ContainerMenu>    
 
             {
-                animes.map(({name , description , image_url, epsodios,} , index) => {
+                animes.map(({name , image_url, _id} , index) => {
                     return (
                         <Anime key={index}
                         name={name}
-                        description={description}
                         image_url={image_url}
-                        episodios={epsodios}
+                        id={_id}
                     
                         />
                     )
@@ -77,13 +76,12 @@ export const Menu = () => {
     
 
             {
-                filmes.map(({name,image_url, description, filme_url }, index) => {
+                filmes.map(({name,image_url, _id}, index) => {
                     return(
                         
                         <Filme name={name}
                                image_url={image_url}
-                               description={description}
-                               filme_url={filme_url}
+                               id={_id}
                                key={index}
                             />
                     )

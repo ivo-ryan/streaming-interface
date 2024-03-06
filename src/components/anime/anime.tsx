@@ -1,22 +1,13 @@
 import { Link } from "react-router-dom";
 import { AnimesTypes } from "../../types/animesTypes";
-import { useDispatch } from "react-redux";
-import { animeNextPage } from '../../redux/dataAnimes/actions.js';
 import { AnimesContainer } from "./style.js";
 
-export const Anime = ({ name, description ,  episodios, image_url  }:AnimesTypes ) => {
-    
-
-    const dispatch = useDispatch();
-
-    const handleAnimeClick = () => {
-        dispatch(animeNextPage({name , description, episodios, image_url}))
-    };
+export const Anime = ({ name, image_url , id }:AnimesTypes ) => {
 
     return (
-        <Link to={"/info"}>
+        <Link to={`/info/${id}`}>
 
-            <AnimesContainer onClick={() => handleAnimeClick()} >
+            <AnimesContainer >
 
                 <div className="img-block">
 

@@ -4,6 +4,7 @@ import logo from '../../assets/logo.png';
 
 
 export const Navbar = ( { hide , navigation}:any ) => {
+    console.log(navigation);
     
     return (
         <SNavbar>

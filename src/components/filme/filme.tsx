@@ -1,21 +1,14 @@
 import { Link } from "react-router-dom";
 import { FilmesTypes } from "../../types/filmesTypes";
-import { useDispatch } from "react-redux";
 import { FilmesContainer } from "./style.js";
-import { filmesNextPage } from "../../redux/dataFilmes/action.js";
 
-export const Filme = ({ name, description ,  filme_url , image_url  }:FilmesTypes ) => {
+export const Filme = ({ name , image_url , id }:FilmesTypes ) => {
 
-    const dispatch = useDispatch();
-
-    const handleFilmeClick = () => {
-        dispatch(filmesNextPage({name , description, filme_url, image_url}))
-    };
 
     return (
-        <Link to={`/filme-info`}>
+        <Link to={`/filme-info/${id}`}>
 
-            <FilmesContainer  onClick={() => handleFilmeClick()} >
+            <FilmesContainer  >
 
                 <div className="img-block">
 

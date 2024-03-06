@@ -1,12 +1,36 @@
-import { useDispatch, useSelector } from "react-redux";
 import { DataContainer, EpContainer, SectionContainer } from "./style";
-import { Link } from "react-router-dom";
-import { animePlayToVideo } from "../../redux/animePlay/actions";
+import { Link, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { Eps, InfoAnimeTypes } from "../../types/infoAnimeTypes";
 
 export const ItemInformation = () => {
-    const { data } = useSelector((rootReducer:any) => rootReducer.dataAnimesReducer)
+    const { id } = useParams();
 
-    const dispatch = useDispatch();
+    const [anime, setAnime] = useState<string>("");
+    const [ image , setImage ] = useState<string>("");
+    const [ descript, setDescript ] = useState<string>("");
+    const [ ep, setEp ] = useState<[]>([]);
+    
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const req = await axios.get(`https://animes-api-k6xs.onrender.com/${id} `);
+
+            const res = await req.data;
+            const { name, description , image_url , epsodios } :InfoAnimeTypes = res
+
+            setAnime(name);
+            setDescript(description);
+            setImage(image_url);
+            setEp(epsodios);
+            
+        }
+
+    fetchData()
+       
+    }, [])
+    
 
 
     return(
@@ -14,13 +38,13 @@ export const ItemInformation = () => {
             <DataContainer>
 
         
-            <h2>{data.name}</h2>
+            <h2>{anime}</h2>
 
-            <img src={data.image_url} alt={data.name} />
+            <img src={image} alt={anime} />
 
             <div className="sinopse">
                 <h4> Sinopse: </h4>
-                <p>{data.description}</p>
+                <p>{descript}</p>
             </div>
 
             </DataContainer>
@@ -30,12 +54,12 @@ export const ItemInformation = () => {
 
                 <div className="ep-list">
                     {
-                        data.episodios.map((ep:any , index:number) => {
+                        ep.map((ep:Eps , index:number) => {
                             return(
                                
-                                <Link  to={`/${data.name}/video`} key={index}>
-                                <li onClick={() => dispatch(animePlayToVideo(index))}>
-                                    <p> <span>{data.name}</span>
+                                <Link  to={`/video/${id}/${index}`} key={index}>
+                                <li>
+                                    <p> <span>{anime}</span>
                                         {ep.type}</p></li>
 
                                 </Link>

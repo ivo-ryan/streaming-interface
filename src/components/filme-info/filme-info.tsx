@@ -1,9 +1,33 @@
-import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 import { DataContainer, EpContainer, SectionContainer } from "./style";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
 
 export const FilmeItemInfo = () => {
-    const { data } = useSelector((root:any) => root.dataFilmesReducer);
+    
+const { id } = useParams();
+
+const [ filme, setFilme ] = useState<string>('');
+const [ image , setImage ] = useState<string>('')
+const [ descript, setDescript ] = useState<string>('');
+
+useEffect(() => {
+    const fetchData = async () => {
+        const req = await axios.get(`https://animes-api-k6xs.onrender.com/filmes/${id}`)
+
+        const res = await req.data;
+
+        const { name , description , image_url } = res;
+
+        setFilme(name)
+        setDescript(description)
+        setImage(image_url)
+        console.log(res);
+        
+    }
+
+    fetchData()
+}, [])
 
 
     return(
@@ -11,13 +35,13 @@ export const FilmeItemInfo = () => {
             <DataContainer>
 
         
-            <h2>{data.name}</h2>
+            <h2>{filme}</h2>
 
-            <img src={data.image_url} alt={data.name} />
+            <img src={image} alt={filme} />
 
             <div className="sinopse">
                 <h4>Sinopse :</h4>
-                <p>{data.description}</p>
+                <p>{descript}</p>
             </div>
 
             </DataContainer>
@@ -26,10 +50,10 @@ export const FilmeItemInfo = () => {
                 <h2>Filme </h2>
 
 
-                <Link to={`/${data.name}/filme`}>
+                <Link to={`/filme/${id}`}>
                 <div className="ep-list">
                    <p>
-                    {data.name}
+                    {filme}
                    </p>
                 </div>
                 </Link>
