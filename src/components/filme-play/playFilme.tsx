@@ -37,8 +37,8 @@ export const FilmePlay = () => {
             
             <div className="container-video">
                 <video controls autoPlay poster={PosterImg} src={url}>
-                     </video>
-            </div>
+                    </video>
+            </div> 
             
         </S.PlayInVideo>
 
