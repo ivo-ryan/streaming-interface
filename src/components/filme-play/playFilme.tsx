@@ -36,7 +36,7 @@ export const FilmePlay = () => {
             <meta itemProp="thumbnailUrl" content={url}/>
             
             <div className="container-video">
-                <video controls autoPlay poster={PosterImg} src={url}>
+                <video controls autoPlay  src="https://ns5019087.ip-15-235-118.net/upmp4/animes/s/solo-leveling/01.mp4">
                     </video>
             </div> 
             
