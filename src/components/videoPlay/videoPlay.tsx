@@ -74,7 +74,7 @@ export const VideoPlay = () => {
                         <div 
                         className="container-video"
                         >
-                            <video src={play.url} poster={PosterImg} autoPlay controls playsInline ></video>
+                            <video src={play.url} poster={PosterImg} autoPlay controls   ></video>
                             
                         </div>
 
