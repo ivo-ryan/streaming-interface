@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { Data } from "../../types/userHomeTypes";
-import { Loading } from "../../components/loading/loading";
 
 
 export const Home = () => {
@@ -17,15 +16,12 @@ export const Home = () => {
     const [ emailPass , setEmailPass ] = useState<string>('');
     const [ user, setUser ] = useState<Data[]>([]);
     const [ valid, setValid ] = useState<string>(borderColor.padrao);
-    const [ loading , setLoading ] = useState(false);
 
     useEffect(() => {
-        setLoading(true);
+
         const fetchData = async () => {
             const api = await axios.get("https://animes-api-k6xs.onrender.com/user");
             const res = api.data;  
-            
-            setLoading(false)
            setUser(res);          
         }
 
@@ -82,8 +78,6 @@ export const Home = () => {
                         Quer assistir? Informe seu email cadastrado.
                     </p>
 
-                    { loading ? <Loading/> : (
-
                         
                         <S.ContainerButtom>
 
@@ -108,7 +102,7 @@ export const Home = () => {
                     
 
                     </S.ContainerButtom>
-                            )}
+                           
                 </S.ContainerValidate>
             </S.LoginContainer>
             </div>           
