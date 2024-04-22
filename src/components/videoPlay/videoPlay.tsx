@@ -1,5 +1,5 @@
 import * as S from "./style";
-import  PosterImg  from '../../assets/poster.jpg';
+// import  PosterImg  from '../../assets/poster.jpg';
 import { useEffect, useState } from "react";
 import { AiOutlineArrowRight , AiOutlineArrowLeft , AiOutlineMenu } from 'react-icons/ai';
 import { useParams } from "react-router-dom";
