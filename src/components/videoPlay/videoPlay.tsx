@@ -74,7 +74,7 @@ export const VideoPlay = () => {
                         <div 
                         className="container-video"
                         >
-                            <video src="https://www.youtube.com/embed/z_Az97RMbuU?si=deC69iSm-A6RmBVo"
+                            <video src={play.url}
                             poster={PosterImg} autoPlay controls  ></video>
                             
                         </div>
