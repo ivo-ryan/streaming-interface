@@ -74,8 +74,7 @@ export const VideoPlay = () => {
                         <div 
                         className="container-video"
                         >
-                            <video src={play.url}
-                            poster={PosterImg} autoPlay controls  ></video>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/z_Az97RMbuU?si=deC69iSm-A6RmBVo" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                             
                         </div>
 
