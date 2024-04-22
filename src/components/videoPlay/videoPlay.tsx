@@ -1,5 +1,5 @@
 import * as S from "./style";
-// import  PosterImg  from '../../assets/poster.jpg';
+import  PosterImg  from '../../assets/poster.jpg';
 import { useEffect, useState } from "react";
 import { AiOutlineArrowRight , AiOutlineArrowLeft , AiOutlineMenu } from 'react-icons/ai';
 import { useParams } from "react-router-dom";
@@ -74,7 +74,8 @@ export const VideoPlay = () => {
                         <div 
                         className="container-video"
                         >
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/z_Az97RMbuU?si=deC69iSm-A6RmBVo" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                            <video src="https://www.youtube.com/embed/z_Az97RMbuU?si=deC69iSm-A6RmBVo"
+                            poster={PosterImg} autoPlay controls  ></video>
                             
                         </div>
 
