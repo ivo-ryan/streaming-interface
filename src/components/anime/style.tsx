@@ -49,4 +49,19 @@ export const AnimesContainer = styled.div`
                 
             }
 
+            @media (max-width: 425px) {
+            .img-block{
+                width: 140px ;
+                height: 200px;
+            }
+
+            .text-block{
+                padding: 5px 10px 5px;
+                h3{
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+            }
+        }
+
 `;

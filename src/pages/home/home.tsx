@@ -49,7 +49,7 @@ export const Home = () => {
     const hide:boolean = true
 
     return (
-        <div id="home">
+        <S.HomeContainer>
 
             <div id="back-container">
 
@@ -106,6 +106,6 @@ export const Home = () => {
                 </S.ContainerValidate>
             </S.LoginContainer>
             </div>           
-        </div>
+        </S.HomeContainer>
     )
 }

@@ -3,7 +3,7 @@ import poster from '../../assets/preview.jpg';
 
 
 export const DashboardContainer = styled.main`
-        width: 100vw;
+        width: 100%;
         min-height: 100vh;
         background-image: url(${poster});
         background-repeat: no-repeat;

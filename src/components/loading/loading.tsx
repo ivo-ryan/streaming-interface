@@ -1,10 +1,10 @@
-import { CgSpinnerTwoAlt } from 'react-icons/cg';
+import { FaSpinner } from 'react-icons/fa';
 import { IsLoading } from './style';
 
 export const Loading = () => {
     return (
         <IsLoading>
-            <CgSpinnerTwoAlt/>
+            <FaSpinner/>
         </IsLoading>
     )
 }

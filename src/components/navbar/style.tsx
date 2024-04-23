@@ -8,6 +8,10 @@ export const SNavbar = styled.header`
         justify-content: center;
         background: #1a1a1a;
         box-shadow: 0 2px 7px 3px #1c1c1c;
+        position: absolute ;
+        z-index: 2;
+        position: fixed;
+        top: 0;
 
         nav{
             display: flex;

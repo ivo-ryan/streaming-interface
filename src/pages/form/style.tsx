@@ -1,4 +1,15 @@
 import { styled } from 'styled-components';
+import preview from '../../assets/preview.jpg';
+
+
+export const SectionContainer = styled.section`
+        max-width: 100vw;
+        min-height: 100vh;
+        background-image: url(${preview});
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 10% 50%;
+`;
 
 
 export const BackContainer = styled.div`

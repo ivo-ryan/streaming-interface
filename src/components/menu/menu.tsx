@@ -3,12 +3,14 @@ import { Anime } from '../anime/anime';
 import { ContainerMenu } from './style';
 import { Filme } from '../filme/filme';
 import { Loading } from '../loading/loading';
+import { InfoAnimeTypes } from '../../types/infoAnimeTypes';
+import { InfoFilmesTypes } from '../../types/infoFilmesTypes';
 
 
 export const Menu = () => {
 
-    const [ animes, setAnimes ] = useState([]);
-    const [ filmes, setFilmes ] = useState([]);
+    const [ animes, setAnimes ] = useState<InfoAnimeTypes[]>([]);
+    const [ filmes, setFilmes ] = useState<InfoFilmesTypes[]>([]);
     const [ loading, setLoading ] = useState<boolean>(false)
 
 

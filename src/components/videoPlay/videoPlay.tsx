@@ -4,11 +4,7 @@ import { useEffect, useState } from "react";
 import { AiOutlineArrowRight , AiOutlineArrowLeft , AiOutlineMenu } from 'react-icons/ai';
 import { useParams } from "react-router-dom";
 import axios from "axios";
-
-interface Ep {
-    type: string,
-    url: string
-}
+import { InfoAnimeTypes } from "../../types/infoAnimeTypes";
 
 export const VideoPlay = () => {
 
@@ -20,7 +16,10 @@ export const VideoPlay = () => {
     const back:number = Bnext ;
 
     const [ anime , setAnime ] = useState<string>("");
-    const [ eps, setEps ] = useState([]);
+    const [ eps, setEps ] = useState([{
+        type: '',
+        url: ''
+    }]);
     const [ descript, setDescript ] = useState<string>("");
 
     useEffect(() => {
@@ -28,7 +27,7 @@ export const VideoPlay = () => {
                 const req = await axios.get(`https://animes-api-k6xs.onrender.com/${id} `)
 
                 const res = await req.data;
-                const { name, description, epsodios } = res;
+                const { name, description, epsodios }:InfoAnimeTypes = res;
 
                 setAnime(name)
                 setDescript(description)
@@ -65,7 +64,7 @@ export const VideoPlay = () => {
         <>
         <S.PlayInVideo>
             {
-                res.map((play:Ep, index: number) => {
+                res.map((play, index: number) => {
                     return (
                         <div key={index}>
                         <h2 > {anime}- {play.type}</h2>
@@ -89,6 +88,10 @@ export const VideoPlay = () => {
         </S.PlayInVideo>
 
         <S.ListEps>
+            
+            <div className="container-pagination">
+
+
             <div className="pagination">
 
             
@@ -127,6 +130,7 @@ export const VideoPlay = () => {
             </div>
 
             </div>
+            </div>
 
             <S.Description>
                 <h3>Informações :</h3>
@@ -140,7 +144,7 @@ export const VideoPlay = () => {
             <S.BlockEp display={display}>
                 
                 {
-                    eps.map((ep:Ep , index:number) => {
+                    eps.map((ep , index:number) => {
                         return (
                             <li onClick={() => setBNext( index) } key={index}>
                                 <p >

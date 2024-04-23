@@ -1,8 +1,18 @@
 import { styled } from 'styled-components';
+import preview from '../../assets/preview.jpg';
+
+export const HomeContainer = styled.div`
+            max-width: 100vw;
+            min-height: 100vh;
+            background-image: url(${preview});
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 10% 50%;
+`
 
 
 export const LoginContainer = styled.div`
-        height: 86vh;
+        height: 100vh;
         width: 100% ;
         display: flex;
         justify-content: center;
@@ -27,7 +37,7 @@ export const Apresentação = styled.div`
 
         @media (max-width: 425px) {
             width: 90%;
-            height: 70%;
+            height: 40%;
         }
 `;
 

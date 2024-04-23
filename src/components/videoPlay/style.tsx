@@ -6,11 +6,11 @@ export const PlayInVideo = styled.div`
             justify-content: center;
             flex-direction: column;
             background-color: #1B1B1B;
-            margin: 30px 10px 0;
+            margin: 20px 10px 0;
 
             
             h2{
-                padding: 20px 0 ;
+                padding: 15px 0 ;
                 font-size: 19px;
                 text-align: center;
                 font-weight: 500;
@@ -24,12 +24,11 @@ export const PlayInVideo = styled.div`
                 align-items: center;
                 background-color: #232323;
                 max-width: 930px ;
-                margin: 0 10px ;
                 height: 595px ;
 
 
                 video{
-                    width: 95%;
+                    width: 100%;
                 }
 
                 @media ( max-width: 768px ){
@@ -37,17 +36,38 @@ export const PlayInVideo = styled.div`
                     max-width: 690px ;
                     max-height: 430px ;
                 }
+
+                @media (max-width: 425px) {
+                    max-height: 220px;
+        }
             }
 `;
 
 export const ListEps = styled.div`
         margin: 0 10px;
         background-color: #1B1B1B;
-        padding: 20px 10px;
+        padding: 20px 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .container-pagination{
+            width: 760px;
+
+            @media (max-width: 768px) {
+                max-width: 690px;
+            }
+
+            @media (max-width: 425px) {
+            max-width: 300px;
+            }
+        
 
         .pagination{
+            width: 100%;
             display: flex;
-            justify-content: space-around;
+            justify-content: end;
             align-items: center;
             margin-bottom: 30px;
             
@@ -56,7 +76,7 @@ export const ListEps = styled.div`
                 display: flex;
                 align-items: center;
                 cursor: pointer;
-                padding: 0.5rem 0.75rem;
+                padding: 7px 5px;
                 margin-left: -1px;
                 line-height: 1.25;
                 color: #fff;
@@ -75,10 +95,12 @@ export const ListEps = styled.div`
                 display: flex;
                 align-items: center;
                 cursor: pointer;
-                padding: 0.2rem 0.5rem ;
+                padding: 5px 5px;
+                border: 1px solid #323232;
+                border: 1px 0 0 1px;
                 
                 svg{
-                    font-size: 25px;
+                    font-size: 24px;
                     transition: all .5s ease;
 
                     &:hover{
@@ -87,6 +109,7 @@ export const ListEps = styled.div`
                 }
             }
         }
+    }
             
  
 `;
@@ -110,6 +133,18 @@ export const Description = styled.div`
             padding: 10px  20px;
             line-height: 25px;
             background-color: #232323;
+        }
+
+            @media (max-width: 425px) {
+
+            h3{
+                width: 100%;
+            }    
+           p{
+            font-size: 14px;
+            padding: 5px 10px;
+            width: 100%;
+           }
         }
 `;
 
@@ -136,4 +171,10 @@ export const BlockEp = styled.div<{display: string}>`              display: ${pr
                         color:  #17a2b8;
                     }
                 }
+    
+                @media (max-width: 425px) {
+                li{
+                    width: 100%;
+                }
+            }
 `;

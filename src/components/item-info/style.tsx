@@ -9,6 +9,15 @@ export const SectionContainer = styled.section`
         gap: 50px;
         padding: 10px  ;
         margin: 30px 0;
+        margin-top: 8%;
+
+        @media (max-width: 768px) {
+            margin-top: 20%;
+        }
+
+        @media (max-width: 425px) {
+            margin-top: 30%;
+        }
 `;
 
 export const DataContainer = styled.div`
@@ -40,6 +49,12 @@ export const DataContainer = styled.div`
                 width: 80%;
                 color: #ccc7c7 ;
                 font-size: 13px;
+            }
+        }
+
+        @media (max-width: 425px) {
+            h2{
+                font-size: 18px;
             }
         }
 `;

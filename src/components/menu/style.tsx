@@ -3,14 +3,23 @@ import { styled } from 'styled-components';
 export const ContainerMenu = styled.div`
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 10px;
             align-items: center;
             justify-content: center;
-            padding: 20px 0;
+            margin-top: 5%;
+            gap: 20px;
             
 
             a{
                 width: 240px;
             }
+
+            @media (max-width: 425px) {
+                margin-top: 20%;
+               gap: 8px ; 
+            a{
+                width: 140px;
+            }
+        }
 
 `;

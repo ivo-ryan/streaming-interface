@@ -2,7 +2,7 @@ import { DataContainer, EpContainer, SectionContainer } from "./style";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Eps, InfoAnimeTypes } from "../../types/infoAnimeTypes";
+import { InfoAnimeTypes } from "../../types/infoAnimeTypes";
 
 export const ItemInformation = () => {
     const { id } = useParams();
@@ -10,7 +10,10 @@ export const ItemInformation = () => {
     const [anime, setAnime] = useState<string>("");
     const [ image , setImage ] = useState<string>("");
     const [ descript, setDescript ] = useState<string>("");
-    const [ ep, setEp ] = useState<[]>([]);
+    const [ ep, setEp ] = useState([{
+        type: '',
+        url: ''
+    }]);
     
 
     useEffect(() => {
@@ -54,7 +57,7 @@ export const ItemInformation = () => {
 
                 <div className="ep-list">
                     {
-                        ep.map((ep:Eps , index:number) => {
+                        ep.map((ep , index:number) => {
                             return(
                                
                                 <Link  to={`/video/${id}/${index}`} key={index}>

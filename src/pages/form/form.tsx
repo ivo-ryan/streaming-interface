@@ -6,7 +6,7 @@ import * as S from './style'
 export const Form  = () => {
 
     return (      
-        <section id="image">   
+        <S.SectionContainer>   
                 <S.BackContainer>
 
                 <Navbar navigation="/"/>
@@ -14,7 +14,7 @@ export const Form  = () => {
                 <Cadastro/>   
 
                 </S.BackContainer>
-        </section>
+        </S.SectionContainer>
 
     )
 

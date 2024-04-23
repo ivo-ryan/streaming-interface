@@ -9,6 +9,10 @@ export const FormContainer = styled.div`
         height: 100%;       
         border-radius: 10px;
         margin-top: 30px;
+
+        @media (max-width: 425px) {
+                padding-top: 30%;
+            }
         
         
 `;
@@ -34,7 +38,7 @@ export const Container = styled.div`
 
             @media (max-width: 425px) {
                 width: 80%;
-                padding: 20px 40px;
+                padding: 20px 30px;
                 height: 100%;
                 
             }

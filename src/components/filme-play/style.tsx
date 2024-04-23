@@ -3,6 +3,11 @@ import {styled} from 'styled-components';
 export const Container = styled.div`
         background-color: #1B1B1B;
         margin: 40px 10px 0 10px;
+        margin-top: 8%;
+
+        @media (max-width: 768px) {
+            margin-top: 15%;
+        }
 `;
 
 export const PlayInVideo = styled.div`

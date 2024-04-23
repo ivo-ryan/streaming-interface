@@ -39,7 +39,7 @@ useEffect(() => {
             <img src={image} alt={filme} />
 
             <div className="sinopse">
-                <h4>Sinopse :</h4>
+                <h4>Sinopse: </h4>
                 <p>{descript}</p>
             </div>
 
