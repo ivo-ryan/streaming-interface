@@ -73,8 +73,11 @@ export const VideoPlay = () => {
                         <div 
                         className="container-video"
                         >
-                            <video src={play.url}
-                            poster={PosterImg} autoPlay controls  ></video>
+                            <a href={play.url} target="_blank" rel="noopener noreferrer">
+
+                            <video 
+                            poster={PosterImg} ></video>
+                            </a>
                             
                         </div>
 
