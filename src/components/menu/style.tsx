@@ -9,7 +9,7 @@ export const ContainerMenu = styled.div`
             gap: 20px;
             
             a{
-                width: 240px;
+                max-width: 240px;
             }
 
             @media (max-width: 425px) {

@@ -4,7 +4,7 @@ export const AnimesContainer = styled.div`
             position: relative;
 
             .img-block{
-                width: 240px;
+                width: 100%;
                 height: 285px;
                 background: #181818;
 

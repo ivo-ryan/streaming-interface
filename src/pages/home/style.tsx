@@ -27,7 +27,7 @@ export const Apresentação = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 50%;
+        height: 35%;
         width: 80%;
         gap: 16px;
 
