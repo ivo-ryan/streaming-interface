@@ -4,7 +4,7 @@ import poster from '../../assets/preview.jpg';
 
 export const DashboardContainer = styled.main`
         width: 100%;
-        min-height: 100vh;
+        height: 100vh;
         background-image: url(${poster});
         background-repeat: no-repeat;
         background-size: cover;
@@ -12,9 +12,7 @@ export const DashboardContainer = styled.main`
         background-attachment: fixed;
 
         @media (max-width: 768px) {
-            background-size: cover ;
             background-position: 100%;
-            background-attachment: fixed;
         }
 
         section{
