@@ -11,40 +11,46 @@ export const Container = styled.div`
 `;
 
 export const PlayInVideo = styled.div`
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;         
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+background-color: #1B1B1B;
+margin: 20px 10px 0;
 
-            
-            h2{
-                padding: 20px 0;
-                font-size: 19px;
-                text-align: center;
-                font-weight: 500;
-                width: 100%;
 
-            }
+h2{
+    padding: 15px 0 ;
+    font-size: 19px;
+    text-align: center;
+    font-weight: 500;
+    width: 100%;
 
-            .container-video{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                max-width: 930px ;
-                margin: 0 10px ;
-                height: 595px ;
-                background-color: #232323;
+}
 
-                video{            
-                    width: 95%;
-                }
+.container-video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #232323;
+    max-width: 930px ;
+    height: 595px ;
 
-                @media ( max-width: 768px ){
 
-                    max-width: 690px ;
-                    max-height: 430px ;
-                }
-            }
+    video{
+        width: 100%;
+    }
+
+    @media ( max-width: 768px ){
+
+        max-width: 690px ;
+        max-height: 430px ;
+    }
+
+    @media (max-width: 425px) {
+        max-height: 220px;
+}
+}
 `;
 
 
