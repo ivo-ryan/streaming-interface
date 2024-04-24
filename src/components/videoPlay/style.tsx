@@ -95,7 +95,7 @@ export const ListEps = styled.div`
         align-items: center;
 
         .container-pagination{
-            width: 760px;
+            max-width: 760px;
 
             @media (max-width: 768px) {
                 max-width: 690px;
