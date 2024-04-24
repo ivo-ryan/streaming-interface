@@ -95,7 +95,7 @@ export const VideoPlay = () => {
             <div className="container-pagination">
 
 
-            <div className="pagination">
+            <S.Pagination>
 
             
             <div>      
@@ -112,11 +112,11 @@ export const VideoPlay = () => {
                 }
              </div>
 
-            <div className="list-svg" onClick={() => handleClickToShowList()}>
+            <S.ListSvg onClick={() => handleClickToShowList()}>
 
             <AiOutlineMenu/>
 
-            </div>
+            </S.ListSvg>
 
             <div>
 
@@ -132,7 +132,7 @@ export const VideoPlay = () => {
             }
             </div>
 
-            </div>
+            </S.Pagination>
             </div>
 
             <S.Description>

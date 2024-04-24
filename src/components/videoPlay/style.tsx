@@ -60,16 +60,22 @@ export const ListEps = styled.div`
             }
 
             @media (max-width: 425px) {
-            max-width: 300px;
+                 max-width: 300px;
             }
-        
+    }
+            
+ 
+`;
 
-        .pagination{
+
+export const Pagination = styled.div`
+            
             width: 100%;
             display: flex;
             justify-content: end;
             align-items: center;
             margin-bottom: 30px;
+            padding: 0 10px ;
             
 
             .buttom{
@@ -88,10 +94,14 @@ export const ListEps = styled.div`
                     color:#17a2b8 ;
                     background-color:#232323;
                 }
-
             }
 
-            .list-svg{
+            @media (max-width: 425px) {
+                font-size: 13px;
+            }
+`;
+
+export const ListSvg = styled.div`
                 display: flex;
                 align-items: center;
                 cursor: pointer;
@@ -107,11 +117,13 @@ export const ListEps = styled.div`
                         color: #17a2b8 ;
                     }
                 }
+
+                @media (max-width: 425px) {
+                svg{
+                    font-size: 20px;
+                }
             }
-        }
-    }
-            
- 
+
 `;
 
 export const Description = styled.div`

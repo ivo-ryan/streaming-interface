@@ -6,16 +6,13 @@ export const ContainerMenu = styled.div`
             gap: 10px;
             align-items: center;
             justify-content: center;
-            margin-top: 5%;
             gap: 20px;
             
-
             a{
                 width: 240px;
             }
 
             @media (max-width: 425px) {
-                margin-top: 20%;
                gap: 8px ; 
             a{
                 width: 140px;
