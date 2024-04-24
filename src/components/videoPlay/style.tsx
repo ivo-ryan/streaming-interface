@@ -104,6 +104,10 @@ export const ListEps = styled.div`
             @media (max-width: 425px) {
                  width: 100%;
             }
+
+            @media (max-width: 320px) {
+                width: 200px;
+            }
     }
             
  
