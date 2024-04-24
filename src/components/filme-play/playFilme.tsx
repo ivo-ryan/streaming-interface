@@ -36,8 +36,10 @@ export const FilmePlay = () => {
             <meta itemProp="thumbnailUrl" content={url}/>
             
             <div className="container-video">
-                <video controls autoPlay poster={PosterImg} src={url} playsInline >
-                    </video>
+            <a href={url} target="_blank" rel="noopener noreferrer">
+            <video 
+            poster={PosterImg} ></video>
+            </a>
             </div> 
 
             
