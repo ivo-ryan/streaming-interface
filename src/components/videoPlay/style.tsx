@@ -97,6 +97,7 @@ export const Pagination = styled.div`
             }
 
             @media (max-width: 425px) {
+                justify-content: center;
                 font-size: 13px;
             }
 `;
