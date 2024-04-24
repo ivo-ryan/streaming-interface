@@ -18,15 +18,20 @@ export const PlayInVideo = styled.div`
 
             }
 
-            .container-video{
+`;
+
+export const ContainerVideo = styled.div`    
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 background-color: #232323;
                 max-width: 930px ;
                 height: 595px ;
+                position: relative;
 
-
+                a{
+                    color: #fff;
+                }
                 video{
                     width: 100%;
                 }
@@ -40,7 +45,44 @@ export const PlayInVideo = styled.div`
                 @media (max-width: 425px) {
                     max-height: 220px;
         }
+
+`;
+
+export const DispatchPlay = styled.div`
+            position: absolute;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0 , 0, 0.7 );       
+            
+
+            svg{
+                transition: all .5s ease;
+                font-size: 10rem;   
             }
+
+            p{
+                font-size: 18px;
+            }
+
+            &:hover{
+
+                    svg{color: #0079ad;}
+                }
+
+    @media (max-width: 320px) {
+        svg{
+            font-size: 8rem;
+        }
+
+        p{
+            font-size: 1rem;
+        }
+    }
 `;
 
 export const ListEps = styled.div`
@@ -60,7 +102,7 @@ export const ListEps = styled.div`
             }
 
             @media (max-width: 425px) {
-                 max-width: 300px;
+                 width: 100%;
             }
     }
             
@@ -97,8 +139,11 @@ export const Pagination = styled.div`
             }
 
             @media (max-width: 425px) {
-                justify-content: center;
                 font-size: 13px;
+            }
+
+            @media (max-width: 320px) {
+                justify-content: center;
             }
 `;
 

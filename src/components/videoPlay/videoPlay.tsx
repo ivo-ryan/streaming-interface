@@ -1,7 +1,7 @@
 import * as S from "./style";
 import  PosterImg  from '../../assets/poster.jpg';
 import { useEffect, useState } from "react";
-import { AiOutlineArrowRight , AiOutlineArrowLeft , AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineArrowRight , AiFillPlayCircle, AiOutlineArrowLeft , AiOutlineMenu } from 'react-icons/ai';
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { InfoAnimeTypes } from "../../types/infoAnimeTypes";
@@ -70,18 +70,23 @@ export const VideoPlay = () => {
                         <h2 > {anime}- {play.type}</h2>
                         <meta itemProp="thumbnailUrl" content={play.url}/>
 
-                        <div 
-                        className="container-video"
+                        <S.ContainerVideo
                         >
                             <a href={play.url} target="_blank" rel="noopener noreferrer">
 
                             <video 
                             poster={PosterImg} ></video>
-                            </a>
                             
-                        </div>
+                        <S.DispatchPlay>
+                            <AiFillPlayCircle/>
 
+                            <p>
+                                O player será aberto em uma nova aba 
+                            </p>
+                        </S.DispatchPlay>
                         
+                            </a>
+                        </S.ContainerVideo>
                         </div>
 
                     )
