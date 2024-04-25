@@ -3,6 +3,7 @@ import  PosterImg  from '../../assets/poster.jpg';
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { AiFillPlayCircle } from "react-icons/ai";
 
 export const FilmePlay = () => {
 
@@ -35,12 +36,25 @@ export const FilmePlay = () => {
             <h2> {filme}</h2>
             <meta itemProp="thumbnailUrl" content={url}/>
             
-            <div className="container-video">
-            <a href={url} target="_blank" rel="noopener noreferrer">
-            <video 
-            poster={PosterImg} ></video>
-            </a>
-            </div> 
+            <S.ContainerVideo
+                        >
+                            <a href={url} target="_blank" rel="noopener noreferrer">
+
+                            <video 
+                            poster={PosterImg} ></video>
+                            
+                        <S.DispatchPlay>
+                            <AiFillPlayCircle/>
+
+                            <p>
+                                O player será aberto em uma nova aba 
+                            </p>
+                        </S.DispatchPlay>
+                        
+                            </a>
+                        </S.ContainerVideo>
+
+
 
             
         </S.PlayInVideo>
