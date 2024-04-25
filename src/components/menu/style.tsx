@@ -11,7 +11,6 @@ export const ContainerMenu = styled.div`
 
             background-image: url(${poster});
             background-repeat: no-repeat;
-            background-size: contain;
             background-attachment: fixed;
 
             padding: 100px 0 20px 0;
