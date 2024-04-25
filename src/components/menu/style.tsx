@@ -7,13 +7,14 @@ export const ContainerMenu = styled.div`
             align-items: center;
             justify-content: center;
             gap: 20px;
+            min-height: 100%;
 
             background-image: url(${poster});
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
 
-            padding-bottom: 20px;
+            padding: 100px 0 20px 0;
 
         @media (max-width: 768px) {
             background-position: 100%;

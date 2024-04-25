@@ -53,15 +53,13 @@ export const Menu = () => {
 
 
     return (
-        <>
+        <>  
 
-        {
+        <ContainerMenu> 
+
+             {
             loading && <Loading/>
-        }
-
-        
-
-        <ContainerMenu>    
+        }   
 
             {
                 animes.map(({name , image_url, _id} , index) => {
