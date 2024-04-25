@@ -9,15 +9,8 @@ export const SectionContainer = styled.section`
         gap: 50px;
         padding: 10px  ;
         margin: 30px 0;
-        margin-top: 8%;
+        margin-top: 6rem
 
-        @media (max-width: 768px) {
-            margin-top: 20%;
-        }
-
-        @media (max-width: 425px) {
-            margin-top: 30%;
-        }
 `;
 
 export const DataContainer = styled.div`
