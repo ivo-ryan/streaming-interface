@@ -21,10 +21,7 @@
 }
 
 body{
-  background-image: url(./assets/preview.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: var(--bg-color);
   color: var(--color);
 }
 
