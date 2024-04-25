@@ -1,12 +1,24 @@
 import { styled } from 'styled-components';
+import poster from '../../assets/preview.jpg';
 
 export const ContainerMenu = styled.div`
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
             align-items: center;
             justify-content: center;
             gap: 20px;
+
+            background-image: url(${poster});
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+
+            padding-bottom: 20px;
+
+        @media (max-width: 768px) {
+            background-position: 100%;
+        }
+            
             
             a{
                 max-width: 240px;

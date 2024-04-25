@@ -8,7 +8,6 @@ export const DashboardContainer = styled.main`
         background-image: url(${poster});
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: 10% 50%;
         background-attachment: fixed;
 
         @media (max-width: 768px) {
