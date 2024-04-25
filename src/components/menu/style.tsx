@@ -1,5 +1,5 @@
 import { styled } from 'styled-components';
-import poster from '../../assets/preview.jpg';
+// import poster from '../../assets/preview.jpg';
 
 export const ContainerMenu = styled.div`
             display: flex;
@@ -9,10 +9,10 @@ export const ContainerMenu = styled.div`
             gap: 20px;
             min-height: 100%;
 
-            background-image: url(${poster});
+            /* background-image: url();
             background-repeat: no-repeat;
             background-size: cover;
-            background-attachment: fixed;
+            background-attachment: fixed; */
 
             padding: 100px 0 20px 0;
 
