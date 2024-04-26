@@ -49,8 +49,15 @@ export const ContainerVideo = styled.div`
                 }
 
                 @media (max-width: 425px) {
-                    max-height: 220px;
-        }
+                    max-height: 248px;
+                }
+                @media (max-width: 375px) {
+                    max-width: 350px;
+                    max-height: 205px;
+                    video{
+                        max-height: 200px;
+                    }
+                }
 
 `;
 
@@ -111,5 +118,13 @@ export const FilmInfo = styled.div`
                 padding: 10px  20px;
                 line-height: 25px;
                 background-color: #232323;
+            }
+
+            @media (max-width: 425px) {
+                p{
+                    width: 96%;
+                    padding: 10px 10px;
+                    text-align: justify;
+                }
             }
 `;

@@ -34,17 +34,25 @@ export const ContainerVideo = styled.div`
                 }
                 video{
                     width: 100%;
+                    height: 100%;
                 }
 
                 @media ( max-width: 768px ){
 
                     max-width: 690px ;
-                    max-height: 430px ;
+                    max-height: 430px;
                 }
 
                 @media (max-width: 425px) {
-                    max-height: 220px;
-        }
+                    max-height: 248px;
+                }
+                @media (max-width: 375px) {
+                    max-width: 350px;
+                    max-height: 205px;
+                    video{
+                        max-height: 200px;
+                    }
+                }
 
 `;
 
@@ -88,7 +96,7 @@ export const DispatchPlay = styled.div`
 export const ListEps = styled.div`
         margin: 0 10px;
         background-color: #1B1B1B;
-        padding: 20px 20px;
+        
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -120,8 +128,8 @@ export const Pagination = styled.div`
             display: flex;
             justify-content: end;
             align-items: center;
-            margin-bottom: 30px;
-            padding: 0 10px ;
+            margin-bottom: 10px;
+            padding: 20px 10px ;
             
 
             .buttom{
@@ -197,25 +205,26 @@ export const Description = styled.div`
             background-color: #232323;
         }
 
-            @media (max-width: 425px) {
+        @media (max-width: 425px) {
+                h3{
+                    width: 90%;
+                }
 
-            h3{
-                width: 100%;
-            }    
-           p{
-            font-size: 14px;
-            padding: 5px 10px;
-            width: 100%;
-           }
-        }
+                p{
+                    width: 90%;
+                    padding: 10px 10px;
+                    text-align: justify;
+                }
+            }
 `;
 
 
 export const BlockEp = styled.div<{display: string}>`              display: ${props => props.display};
-                width: 100%;
+                width: 90%;
                 flex-direction: column;
                 align-items: center;
                 gap: 5px;
+                padding-bottom: 20px;
                 
 
 
