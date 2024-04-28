@@ -1,11 +1,8 @@
-# React + TypeScript + Vite
+# Streaming Interface
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi criado no intuito de ser o mais aproximado possível de uma plataforma de streaming , onde é possível que o usuário veja alguns animes e filmes através dela , para este projeto foi criada uma api para conter todas as informações dos filmes e animes nela .
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A maior dificuldade que eu encontrei foi a criação da api , onde eu usei o node , o express e o mongoDB , todo o projeto foi feito buscando a melhor experiência do usuário e a performace do site.
 
 ## Expanding the ESLint configuration
 
