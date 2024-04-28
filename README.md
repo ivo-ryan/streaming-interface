@@ -6,5 +6,27 @@ A maior dificuldade que eu encontrei foi a criação da api , onde eu usei o nod
 
 [
    <img src="./streaming.gif" alt="Gif do projeto "/>
-]
+](https://streaming-interface.vercel.app/dashboard)
 
+## Tecnologias Utilizadas
+- TypeScript 
+- React 
+- React-router 
+- Styled-components 
+- Node.js 
+- Express
+- MongoDB
+
+## Como utilizar
+1 - Clone o projeto
+```
+git clone <url>
+```
+2 - Instale as dependências 
+```
+npm install
+```
+3 - Rode o projeto
+```
+npm run dev
+```
