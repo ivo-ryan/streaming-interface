@@ -6,7 +6,7 @@ A maior dificuldade que eu encontrei foi a criação da api , onde eu usei o nod
 
 [
    <img src="./streaming.gif" alt="Gif do projeto "/>
-](https://streaming-interface.vercel.app/dashboard)
+](https://streaming-interface.vercel.app)
 
 ## Tecnologias Utilizadas
 - TypeScript 
