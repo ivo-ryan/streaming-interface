@@ -1,4 +1,4 @@
-# Streaming Interface
+# Streaming Platform
 
 Este projeto foi criado no intuito de ser o mais aproximado possível de uma plataforma de streaming , onde é possível que o usuário veja alguns animes e filmes através dela , para este projeto foi criada uma api para conter todas as informações dos filmes e animes nela .
 
