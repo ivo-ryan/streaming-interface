@@ -43,8 +43,8 @@ export const ContainerVideo = styled.div`
                     max-height: 430px;
                 }
 
-                @media (max-width: 425px) {
-                    max-height: 248px;
+                @media (max-width: 450px) {
+                    max-height: 268px;
                 }
                 @media (max-width: 375px) {
                     max-width: 350px;
@@ -109,7 +109,7 @@ export const ListEps = styled.div`
                 max-width: 690px;
             }
 
-            @media (max-width: 425px) {
+            @media (max-width: 450px) {
                  width: 100%;
             }
 
@@ -150,7 +150,7 @@ export const Pagination = styled.div`
                 }
             }
 
-            @media (max-width: 425px) {
+            @media (max-width: 450px) {
                 font-size: 13px;
             }
 
@@ -176,7 +176,7 @@ export const ListSvg = styled.div`
                     }
                 }
 
-                @media (max-width: 425px) {
+                @media (max-width: 450px) {
                 svg{
                     font-size: 20px;
                 }
@@ -205,7 +205,7 @@ export const Description = styled.div`
             background-color: #232323;
         }
 
-        @media (max-width: 425px) {
+        @media (max-width: 450px) {
                 h3{
                     width: 90%;
                 }
@@ -243,7 +243,7 @@ export const BlockEp = styled.div<{display: string}>`              display: ${pr
                     }
                 }
     
-                @media (max-width: 425px) {
+                @media (max-width: 450px) {
                 li{
                     width: 100%;
                 }

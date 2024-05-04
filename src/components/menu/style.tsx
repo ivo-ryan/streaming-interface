@@ -24,11 +24,5 @@ export const ContainerMenu = styled.div`
                 max-width: 240px;
             }
 
-            @media (max-width: 425px) {
-               gap: 8px ; 
-            a{
-                width: 140px;
-            }
-        }
 
 `;

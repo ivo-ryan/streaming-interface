@@ -48,8 +48,8 @@ export const ContainerVideo = styled.div`
                     max-height: 430px ;
                 }
 
-                @media (max-width: 425px) {
-                    max-height: 248px;
+                @media (max-width: 450px) {
+                    max-height: 258px;
                 }
                 @media (max-width: 375px) {
                     max-width: 350px;
@@ -120,7 +120,7 @@ export const FilmInfo = styled.div`
                 background-color: #232323;
             }
 
-            @media (max-width: 425px) {
+            @media (max-width: 450px) {
                 p{
                     width: 96%;
                     padding: 10px 10px;

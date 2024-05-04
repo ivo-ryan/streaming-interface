@@ -43,7 +43,7 @@ export const DataContainer = styled.div`
             }
         }
 
-        @media (max-width: 425px) {
+        @media (max-width: 450px) {
             h2{
                 font-size: 18px;
             }

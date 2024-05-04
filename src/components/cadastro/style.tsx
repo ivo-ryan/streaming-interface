@@ -10,8 +10,8 @@ export const FormContainer = styled.div`
         border-radius: 10px;
         margin-top: 30px;
 
-        @media (max-width: 425px) {
-                padding-top: 30%;
+        @media (max-width: 450px) {
+                padding-top: 100px;
             }
         
         
@@ -36,7 +36,7 @@ export const Container = styled.div`
                 font-size: 20px;
             }
 
-            @media (max-width: 425px) {
+            @media (max-width: 450px) {
                 width: 80%;
                 padding: 20px 30px;
                 height: 100%;
@@ -133,7 +133,7 @@ export const MsgSucesso = styled.div`
                 color: #004085;
             }
 
-            @media (max-width: 425px) {
+            @media (max-width: 450px) {
                 margin-top: 10px;
             }
 
