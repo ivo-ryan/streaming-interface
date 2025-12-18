@@ -7,7 +7,7 @@ export const Information = () => {
 
     return(
         <InfoContainer>
-            <Navbar navigation="/dashboard"/>
+            <Navbar navigation="/"/>
 
             <ItemInformation />
 

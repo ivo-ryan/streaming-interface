@@ -7,7 +7,7 @@ export const FilmeInfo = () => {
 
     return(
         <InfoContainer>
-             <Navbar navigation="/dashboard"/>
+             <Navbar navigation="/"/>
 
             <FilmeItemInfo/>
 
